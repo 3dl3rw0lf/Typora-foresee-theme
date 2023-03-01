@@ -357,6 +357,8 @@ del {
 pre.md-fences {
     padding: 10px 10px 10px 30px;
     margin-bottom: 20px;
+    /* Just use for ubuntu*/
+    background-color:var(--sidebar);
 }
 
 #ty-tooltip {
