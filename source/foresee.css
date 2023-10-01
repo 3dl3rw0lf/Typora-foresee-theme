@@ -130,6 +130,14 @@ a {
 }
 
 /* badge */
+span[alt="black"] {
+    margin-left: .2em;
+    padding: 0 .5em;
+    color: white;
+    border-radius: 5%;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+}
+
 span[alt="blue"] {
     margin-left: .2em;
     padding: 0 .5em;
