@@ -39,7 +39,7 @@ Selected textstyle is inspired by [typora-dyzj-theme](https://github.com/muggled
 
 ## Personalities
 
-Modify code in XXX-light(dark).css so that you c obtain special and personal style
+Modify code in XXX-light(dark).css so that you can make your own personal style
 
 ```css
 :root {
