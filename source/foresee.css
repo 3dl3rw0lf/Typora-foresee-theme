@@ -225,7 +225,7 @@ blockquote img {
     margin-right: .2rem;
 }
 
-h2+blockquote {
+h2+blockquote,blockquote[alt="green"] {
     color: #00CD66;
     border-left-color: #00CD66;
 }
@@ -239,7 +239,7 @@ h2+blockquote img {
     margin-right: .2rem;
 }
 
-h3+blockquote {
+h3+blockquote,blockquote[alt="blue"] {
     color: #00BFFF;
     border-left-color: #00BFFF;
 }
@@ -252,7 +252,7 @@ h3+blockquote img {
     margin-right: .2rem;
 }
 
-h4+blockquote {
+h4+blockquote,blockquote[alt="orange"]{
     border-left-color: #FF8C00;
     color: #FF8C00;
 }
