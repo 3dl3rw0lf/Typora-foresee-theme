@@ -14,6 +14,16 @@
 2. Typora依次打开菜单>主题，点击按钮`打开主题文件夹`
 3. 复制粘贴到Typora主题文件夹
 
+![9](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/bd50a7be-217a-403a-bb6b-f8982fe38e17)
+![10](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/d3c5bcae-bc1e-4f6d-b6a3-167a22ce0264)
+![11](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/aa77d347-c6fe-4a54-b438-c3eabc0bad7e)
+![12](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/8e9ded2c-f2de-45fb-8a25-e8bf11bdb7f4)
+![13](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/966859b1-c8d4-4467-81b0-b50e5c180a65)
+![14](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/d861568c-2f03-4dcd-b35d-85c2a184dcc6)
+![15](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/053e137a-9865-4a95-9043-d69ef4338293)
+![16](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/a8ea2431-cc1e-41de-b34c-b0321752a343)
+
+
 ## 预览
 
 ### 浅色模式
