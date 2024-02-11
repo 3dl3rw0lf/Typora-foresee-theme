@@ -19,15 +19,7 @@ Selected textstyle is inspired by [typora-dyzj-theme](https://github.com/muggled
 2. Typora open menu>theme，click the button`open theme folder`
 3. copy and paste into the theme folder
 
-![1](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/039451d7-2936-4c5e-a3f3-3b99f8a4ab12)
-![2](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/f5c1e9e0-9b93-4804-a18f-0685d4e2aca1)
-![3](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/60c0c035-d4a7-451c-8551-5fd3859330ba)
-![4](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/067ddab9-566f-4939-a53b-11c12602cc61)
-![5](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/4e811f63-ec7a-426b-902c-26c28e0dc0a3)
-![6](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/394a732c-8fea-4217-bccd-a845663ab2d9)
-![7](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/d6a56a46-b246-41c3-a97d-426b193e6222)
-![8](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/f0df12cb-ef82-49f2-92bc-9021126f66bf)
-
+![](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/a0c6b59a-c0ab-45ca-89b2-b4e0bdba9ab1)
 
 ## Preview
 
