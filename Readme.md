@@ -12,6 +12,11 @@ Based on default `night` theme modifies my theme
 
 Selected textstyle is inspired by [typora-dyzj-theme](https://github.com/muggledy/typora-dyzj-theme) 
 
+## New features
+- blockquote style supports linear-gradient
+- add level 4 header animation
+- use `scss` format substitute original `css`
+- provide local small icon in foldername called `badge`
 
 ## How to use
 
@@ -19,17 +24,133 @@ Selected textstyle is inspired by [typora-dyzj-theme](https://github.com/muggled
 2. Typora open menu>theme，click the button`open theme folder`
 3. copy and paste into the theme folder
 
-![](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/a0c6b59a-c0ab-45ca-89b2-b4e0bdba9ab1)
+## Tutorial
+
+### Heading
+
+### ![](assets/90091016/PixPin_2024-02-21_17-12-17.png)
+
+### Text Style
+
+#### Bold
+
+![](assets/90091016/PixPin_2024-02-21_17-16-07.png)
+
+#### Wavy line
+
+![](assets/90091016/PixPin_2024-02-21_17-17-32.png)
+
+#### Emphases
+
+![](assets/90091016/PixPin_2024-02-21_17-18-07.png)
+
+### Footnote
+
+```markdown
+Knowledge is power[^1]
+```
+
+![](assets/90091016/PixPin_2024-02-21_17-19-16.png)
+
+### Highlight
+
+You must open highlight in Typora config so that it can work well . 
+
+### Badge
+
+```html
+<span alt = 'black'>black</span>
+<span alt = 'blue'>blue</span>
+<span alt = 'orange'>orange</span>
+<span alt = 'purple'>purple</span>
+```
+
+![](assets/90091016/PixPin_2024-02-21_17-21-29.png)
+
+### Blockquote
+
+![](assets/90091016/PixPin_2024-02-21_17-22-08.png)
+
+```html
+<blockquote alt = 'green'>green,default color</blockquote>
+<blockquote alt = 'blue'>blue</blockquote>
+<blockquote alt = 'orange'>orange</blockquote>
+```
+
+![](assets/90091016/PixPin_2024-02-21_17-23-05.png)
+
+### icon
+
+![](assets/90091016/PixPin_2024-02-21_17-26-53.png)
+
+We provide some icons for you to save time . You can also via https://github.com/passwordgloo/icon to choose what you want .
+
+| Name      | Network Address Or Your Local Address                        | Effect                                                       |
+| --------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| warning   | `![](https://cdn.jsdelivr.net/gh/passwordgloo/icon/tip/20/warning.svg)` | ![](https://cdn.jsdelivr.net/gh/passwordgloo/icon/tip/20/warning.svg) |
+| info      | `![](https://cdn.jsdelivr.net/gh/passwordgloo/icon/tip/20/info.svg)` | ![](https://cdn.jsdelivr.net/gh/passwordgloo/icon/tip/20/info.svg) |
+| note      | `![](https://cdn.jsdelivr.net/gh/passwordgloo/icon/tip/20/note.svg)` | ![](https://cdn.jsdelivr.net/gh/passwordgloo/icon/tip/20/note.svg) |
+| question  | `![](https://cdn.jsdelivr.net/gh/passwordgloo/icon/tip/20/question.svg)` | ![](https://cdn.jsdelivr.net/gh/passwordgloo/icon/tip/20/question.svg) |
+| wrong     | `![](https://cdn.jsdelivr.net/gh/passwordgloo/icon/tip/20/wrong.svg)` | ![](https://cdn.jsdelivr.net/gh/passwordgloo/icon/tip/20/wrong.svg) |
+| success   | `![](https://cdn.jsdelivr.net/gh/passwordgloo/icon/tip/20/success.svg)` | ![](https://cdn.jsdelivr.net/gh/passwordgloo/icon/tip/20/success.svg) |
+| link      | `![](https://cdn.jsdelivr.net/gh/passwordgloo/icon/tip/20/link.svg)` | ![](https://cdn.jsdelivr.net/gh/passwordgloo/icon/tip/20/link.svg) |
+| unlink    | `![](https://cdn.jsdelivr.net/gh/passwordgloo/icon/tip/20/unlink.svg)` | ![](https://cdn.jsdelivr.net/gh/passwordgloo/icon/tip/20/unlink.svg) |
+| bookmark  | `![](https://cdn.jsdelivr.net/gh/passwordgloo/icon/tip/20/bookmark.svg)` | ![](https://cdn.jsdelivr.net/gh/passwordgloo/icon/tip/20/bookmark.svg) |
+| battery   | `![](https://cdn.jsdelivr.net/gh/passwordgloo/icon/tip/20/battery.svg)` | ![](https://cdn.jsdelivr.net/gh/passwordgloo/icon/tip/20/battery.svg) |
+| battery-2 | `![](https://cdn.jsdelivr.net/gh/passwordgloo/icon/tip/20/battery-2.svg)` | ![](https://cdn.jsdelivr.net/gh/passwordgloo/icon/tip/20/battery-2.svg) |
+| battery-3 | `![](https://cdn.jsdelivr.net/gh/passwordgloo/icon/tip/20/battery-3.svg)` | ![](https://cdn.jsdelivr.net/gh/passwordgloo/icon/tip/20/battery-3.svg) |
+| battery-4 | `![](https://cdn.jsdelivr.net/gh/passwordgloo/icon/tip/20/battery-4.svg)` | ![](https://cdn.jsdelivr.net/gh/passwordgloo/icon/tip/20/battery-4.svg) |
+
+## List
+
+### Ordered lists
+
+![](assets/90091016/PixPin_2024-02-21_17-29-09.png)
+
+### Unordered lists
+
+![](assets/90091016/PixPin_2024-02-21_17-30-22.png)
+
+### Todo list
+
+![](assets/90091016/PixPin_2024-02-21_17-31-10.png)
+
+### Link
+
+![](assets/90091016/PixPin_2024-02-21_17-32-34.png)
+
+### Formula
+
+![](assets/90091016/PixPin_2024-02-21_17-33-12.png)
+
+```mathematica
+17+15=32\\
+32\%3=2\iff\begin{cases}
+17\%3=2\\
+15\%3=0\\
+2+0=2
+\end{cases}
+```
+
+![](assets/90091016/PixPin_2024-02-21_17-35-00.png)
+
+### Table
+
+![](assets/90091016/PixPin_2024-02-21_17-36-07.png)
+
+### Advice
+
+![](assets/90091016/PixPin_2024-02-21_17-36-38.png)
 
 ## Preview
 
-### light mode
+### dark mode
 
-![](https://user-images.githubusercontent.com/90091016/271819047-8310cd64-8baf-4310-a273-85c8a51d6305.png)
+![](assets/90091016/PixPin_2024-02-21_17-38-05.png)
 
-### Dark mode
+### Light mode
 
-![](https://user-images.githubusercontent.com/90091016/271819107-cd27fc6a-b813-41f0-b685-815630513b35.png)
+![](assets/90091016/PixPin_2024-02-21_17-39-47.png)
 
 ## Personalities
 

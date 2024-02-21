@@ -1,5 +1,5 @@
 ---
-title: dark mode
+title: light mode
 author: passwordgloo
 ---
 
@@ -62,10 +62,7 @@ You must open highlight in Typora config so that it can work well .
 <span alt = 'purple'>purple</span>
 ```
 
-<span alt='black'>black</span>
-<span alt='blue'>blue</span>
-<span alt='orange'>orange</span>
-<span alt='purple'>purple</span>
+<span alt='black'>black</span>&emsp;<span alt='blue'>blue</span>&emsp;<span alt='orange'>orange</span>&emsp;<span alt='purple'>purple</span>
 
 ## Blockquote
 
