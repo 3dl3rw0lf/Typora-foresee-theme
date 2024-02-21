@@ -28,21 +28,25 @@ Selected textstyle is inspired by [typora-dyzj-theme](https://github.com/muggled
 
 ### Heading
 
-### ![](assets/90091016/PixPin_2024-02-21_17-12-17.png)
+![PixPin_2024-02-21_17-12-17](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/21c159c3-4c96-4ff7-b892-3bec0e5318fd)
+
 
 ### Text Style
 
 #### Bold
 
-![](assets/90091016/PixPin_2024-02-21_17-16-07.png)
+![PixPin_2024-02-21_17-16-07](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/c4ae1b79-eb7a-4fae-8102-912f4f584036)
+
 
 #### Wavy line
 
-![](assets/90091016/PixPin_2024-02-21_17-17-32.png)
+![PixPin_2024-02-21_17-17-32](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/704f1cd0-7a3c-4ad7-bf27-6810d22bda08)
+
 
 #### Emphases
 
-![](assets/90091016/PixPin_2024-02-21_17-18-07.png)
+![PixPin_2024-02-21_17-18-07](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/f4ffa549-9010-4fe5-8d2a-479debab2c75)
+
 
 ### Footnote
 
@@ -50,7 +54,8 @@ Selected textstyle is inspired by [typora-dyzj-theme](https://github.com/muggled
 Knowledge is power[^1]
 ```
 
-![](assets/90091016/PixPin_2024-02-21_17-19-16.png)
+![PixPin_2024-02-21_17-19-16](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/7e899e85-e97d-48e8-9a40-2f0ea80139ec)
+
 
 ### Highlight
 
@@ -65,11 +70,12 @@ You must open highlight in Typora config so that it can work well .
 <span alt = 'purple'>purple</span>
 ```
 
-![](assets/90091016/PixPin_2024-02-21_17-21-29.png)
+![PixPin_2024-02-21_17-21-29](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/93882042-1a2f-4116-8528-10b72eb6bc12)
 
 ### Blockquote
 
-![](assets/90091016/PixPin_2024-02-21_17-22-08.png)
+![PixPin_2024-02-21_17-22-08](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/d50be52a-52f0-412b-baac-b089f4c6cc0d)
+
 
 ```html
 <blockquote alt = 'green'>green,default color</blockquote>
@@ -77,11 +83,13 @@ You must open highlight in Typora config so that it can work well .
 <blockquote alt = 'orange'>orange</blockquote>
 ```
 
-![](assets/90091016/PixPin_2024-02-21_17-23-05.png)
+![PixPin_2024-02-21_17-23-05](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/a694e099-ca70-428a-aa05-4c9af60a29b5)
+
 
 ### icon
 
-![](assets/90091016/PixPin_2024-02-21_17-26-53.png)
+![PixPin_2024-02-21_17-26-53](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/2634cc54-aeed-4170-8997-c9553660821b)
+
 
 We provide some icons for you to save time . You can also via https://github.com/passwordgloo/icon to choose what you want .
 
@@ -104,24 +112,24 @@ We provide some icons for you to save time . You can also via https://github.com
 ## List
 
 ### Ordered lists
+![PixPin_2024-02-21_17-29-09](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/94db04d8-79ed-47f8-8759-b7cefe5c323d)
 
-![](assets/90091016/PixPin_2024-02-21_17-29-09.png)
 
 ### Unordered lists
+![PixPin_2024-02-21_17-30-22](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/67e9f976-d15c-4a40-b050-ef61cbe8ebca)
 
-![](assets/90091016/PixPin_2024-02-21_17-30-22.png)
 
 ### Todo list
 
-![](assets/90091016/PixPin_2024-02-21_17-31-10.png)
+![PixPin_2024-02-21_17-31-10](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/64736009-6169-4767-8ece-805da4949727)
 
 ### Link
 
-![](assets/90091016/PixPin_2024-02-21_17-32-34.png)
+![PixPin_2024-02-21_17-32-34](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/6d7a8269-c342-443b-942a-17a01ea35f37)
 
 ### Formula
 
-![](assets/90091016/PixPin_2024-02-21_17-33-12.png)
+![PixPin_2024-02-21_17-33-12](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/45925df9-07aa-41fb-851e-ef5c8f99a3ca)
 
 ```mathematica
 17+15=32\\
@@ -132,25 +140,25 @@ We provide some icons for you to save time . You can also via https://github.com
 \end{cases}
 ```
 
-![](assets/90091016/PixPin_2024-02-21_17-35-00.png)
+![PixPin_2024-02-21_17-35-00](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/5965db90-e92e-4bb5-9226-c5d445d2e504)
+
 
 ### Table
+![PixPin_2024-02-21_17-36-07](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/cdc82a9b-9890-4d8b-8d33-fe47de3f2083)
 
-![](assets/90091016/PixPin_2024-02-21_17-36-07.png)
 
 ### Advice
 
-![](assets/90091016/PixPin_2024-02-21_17-36-38.png)
+![PixPin_2024-02-21_17-36-38](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/876dca28-853b-4f89-b72a-62b7ec9b749c)
 
 ## Preview
 
-### dark mode
+### Dark mode
 
-![](assets/90091016/PixPin_2024-02-21_17-38-05.png)
+![PixPin_2024-02-21_17-38-05](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/a717f535-b450-40d5-9059-19606ad3db7a)
 
 ### Light mode
-
-![](assets/90091016/PixPin_2024-02-21_17-39-47.png)
+![PixPin_2024-02-21_17-39-47](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/0f4f7b8a-0700-4aa1-af58-cb7c44fccb42)
 
 ## Personalities
 
