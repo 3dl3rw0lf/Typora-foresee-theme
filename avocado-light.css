@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import "source/foresee.css";
+@import "source/foresee.min.css";
 @import "source/codelight.css";
 
 /* theme-color: #FF6347(tomato)  #FF00FF(violet) #00BFFF(sky) #00CD66(grass) #FF8C00(orange)*/
@@ -16,5 +16,5 @@
     --rawblock-edit-panel-bd: var(--sidebar);
     --item-hover-bg-color: var(--theme-color);
     --control-text-hover-color: var(--theme-color);
-    --font-family: "Microsoft YaHei", "Arial", "sans-serif";
+    --font-family: "Microsoft YaHei","PingFang SC", "Arial", "sans-serif";
 }

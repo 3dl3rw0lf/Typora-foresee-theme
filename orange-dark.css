@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import "source/foresee.css";
+@import "source/foresee.min.css";
 @import "source/codedark.css";
 
 /* theme-color: #FF6347(tomato)  #FF00FF(violet) #00BFFF(sky) #00CD66(grass) #FF8C00(orange)*/
@@ -10,12 +10,12 @@
     --sidebar: #3E3E3E;
     --text-color: #DEDEDE;
     --theme-color: #FF8C00;
-    --focus-color: linear-gradient(to right, #ec77ab 0%, #7873f5 100%);;
+    --focus-color: #00CD66;
     --bg-color: var(--article);
     --select-text-bg-color: #666;
     --primary-color: var(--theme-color);
     --rawblock-edit-panel-bd: var(--sidebar);
     --item-hover-bg-color: var(--theme-color);
     --control-text-hover-color: var(--theme-color);
-    --font-family: "Microsoft YaHei", "Arial", "sans-serif";
+    --font-family: "Microsoft YaHei","PingFang SC", "Arial", "sans-serif";
 }

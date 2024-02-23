@@ -42,35 +42,33 @@ body {
 } 
 */
 
-/* -----------------article content---------------------- */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+//header style
+@mixin header-common{
     margin-top: 1rem;
     margin-bottom: 1rem;
     line-height: 1.4;
     cursor: text;
+    font-family: var(--font-family);
 }
 
 h1 {
-    font-size: 2rem;
-    font-weight: 2000;
+    font:{
+        size: 2rem;
+        weight: 2000;
+        family: var(--font-family);
+    };
     line-height: 1.2;
     text-align: center;
-    font-family: var(--font-family);
 }
 
 h2 {
     font-size: 1.8rem;
     font-weight: 1000;
     line-height: 1.2;
-    padding-left: .5em;
-    font-family: var(--font-family);
+    padding-left: .5rem;
     border-left: 8px solid var(--theme-color);
     border-radius: 6px;
+    @include header-common();
 }
 
 #write>h2.md-focus {
@@ -78,11 +76,17 @@ h2 {
 }
 
 h3 {
-    font-size: 1.6em;
-    font-weight: 500;
-    line-height: 1.43;
-    font-family: var(--font-family);
-    border-bottom: 1px dashed var(--theme-color);
+    font-size: 1.6rem;
+    font-weight: 700;
+    @include header-common();
+    &::after{
+        content:'';
+        display: block;
+        width:5rem;
+        height:.3rem;
+        background-color: var(--theme-color);
+        border-radius: 16%;
+    }
 }
 
 #write>h3.md-focus {
@@ -90,10 +94,18 @@ h3 {
 }
 
 h4 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.43;
+    border-bottom: 1px dashed var(--theme-color);
+    @include header-common();
+}
+
+h5 {
     color: var(--theme-color);
     font-weight: 300;
-    font-size: 1.4em;
-    font-family: var(--font-family);
+    font-size: 1.2rem;
+    @include header-common();
     &:hover{
         animation: bounce 2s infinite;
     }
@@ -109,12 +121,6 @@ h4 {
     60%{
         transform:translateY(-1rem)
     }
-}
-
-h5 {
-    font-size: 1.2em;
-    font-family: var(--font-family);
-    font-weight: 900;
 }
 
 #write>h5.md-focus:before {
