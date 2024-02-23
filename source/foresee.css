@@ -97,7 +97,7 @@ h4 {
 }
 
 h4:hover {
-  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
 }
 
 @keyframes bounce {
@@ -243,11 +243,12 @@ blockquote img {
 }
 
 h2 + blockquote, blockquote[alt="green"] {
-  color: #00CD66;
-  border-left: 8px solid transparent;
-  background-clip: padding-box, border-box;
-  background-origin: padding-box, border-box;
+  margin-left: .2em;
+  padding: 0 .5em;
+  color: white;
+  border-radius: 5%;
   background-image: linear-gradient(to right, var(--sidebar), var(--sidebar)), linear-gradient(0deg, #00e3ae 0%, #9be15d 100%);
+  color: #00CD66;
 }
 
 /* change svg color */
@@ -260,11 +261,12 @@ h2 + blockquote img {
 }
 
 h3 + blockquote, blockquote[alt="blue"] {
-  color: #00BFFF;
-  border-left: 8px solid transparent;
-  background-clip: padding-box, border-box;
-  background-origin: padding-box, border-box;
+  margin-left: .2em;
+  padding: 0 .5em;
+  color: white;
+  border-radius: 5%;
   background-image: linear-gradient(to right, var(--sidebar), var(--sidebar)), linear-gradient(0deg, #4facfe 0%, #00f2fe 100%);
+  color: #00BFFF;
 }
 
 h3 + blockquote img {
@@ -276,9 +278,10 @@ h3 + blockquote img {
 }
 
 h4 + blockquote, blockquote[alt="orange"] {
-  border-left: 8px solid transparent;
-  background-clip: padding-box, border-box;
-  background-origin: padding-box, border-box;
+  margin-left: .2em;
+  padding: 0 .5em;
+  color: white;
+  border-radius: 5%;
   background-image: linear-gradient(to right, var(--sidebar), var(--sidebar)), linear-gradient(0deg, #fc6076 0%, #ff9a44 100%);
   color: #FF8C00;
 }
@@ -292,9 +295,10 @@ h4 + blockquote img {
 }
 
 h5 + blockquote, blockquote[alt="purple"] {
-  border-left: 8px solid transparent;
-  background-clip: padding-box, border-box;
-  background-origin: padding-box, border-box;
+  margin-left: .2em;
+  padding: 0 .5em;
+  color: white;
+  border-radius: 5%;
   background-image: linear-gradient(to right, var(--sidebar), var(--sidebar)), linear-gradient(0deg, #8F41E9, #578AEF);
   color: #8F41E9;
 }
@@ -424,6 +428,7 @@ pre.md-fences {
 .md-task-list-item > input {
   margin-left: -1.3em;
   margin-top: 0.3rem;
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
