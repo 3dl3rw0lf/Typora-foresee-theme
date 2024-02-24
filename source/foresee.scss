@@ -52,11 +52,9 @@ body {
 }
 
 h1 {
-    font:{
-        size: 2rem;
-        weight: 2000;
-        family: var(--font-family);
-    };
+    font-size: 2rem;
+    font-weight: 2000;
+    font-family: var(--font-family);
     line-height: 1.2;
     text-align: center;
 }
@@ -85,7 +83,7 @@ h3 {
         width:5rem;
         height:.3rem;
         background-color: var(--theme-color);
-        border-radius: 16%;
+        border-radius: .5rem;
     }
 }
 
@@ -224,86 +222,81 @@ li::marker {
 // blockquote style , default single color
 
 @mixin blockquote-common {
+    text-indent: 0em;
+    line-height: inherit;
+    min-height: 1.5rem;
+    margin: 1em 0;
+    padding: 12px 0 8px 10px;
+    border-radius:6px;
     border-left: 8px solid transparent;
     background-clip: padding-box, border-box;
     background-origin: padding-box, border-box;
+    overflow: hidden;
+}
+
+@mixin blockquote-img {
+    position: relative;
+    transform: translateX(-80px);
+    height: 1rem;
+    margin-right: .2rem;
 }
 
 blockquote {
-    padding: 12px 0 8px 10px;
-    background-color: var(--sidebar);
-    line-height: inherit;
-    min-height: 20px;
-    margin: 1em 0;
-    border-left: .5rem solid var(--theme-color);
-    border-radius:6px;
-    text-indent: 0em;
+    @include blockquote-common();    
     color: var(--theme-color);
-    overflow: hidden;
+    background-image: linear-gradient(to right, var(--sidebar),var(--sidebar)), linear-gradient(0deg,var(--theme-color) 0%,var(--theme-color) 100%);
+    color: #00CD66;
+
     img {
-        position: relative;
-        transform: translateX(-80px);
+        @include blockquote-img();
         filter: drop-shadow(var(--theme-color) 80px 0);
-        height: 1rem;
-        margin-right: .2rem;
     }
 }
 
-h2+blockquote,blockquote[alt="green"] {
-    @include badge-common();
+h2+blockquote,blockquote[alt="green"]{
+    @include blockquote-common();
     background-image: linear-gradient(to right, var(--sidebar),var(--sidebar)), linear-gradient(0deg,#00e3ae 0%,#9be15d 100%);
     color: #00CD66;
 }
 
 /* change svg color */
 h2+blockquote img {
-    position: relative;
-    transform: translateX(-80px);
+    @include blockquote-img();
     filter: drop-shadow(#00CD66 80px 0);
-    height: 1rem;
-    margin-right: .2rem;
+    
 }
 
-h3+blockquote,blockquote[alt="blue"] {
-    @include badge-common();
+h3+blockquote,blockquote[alt="blue"]{
+    @include blockquote-common();
     background-image: linear-gradient(to right, var(--sidebar),var(--sidebar)), linear-gradient(0deg,#4facfe 0%, #00f2fe 100%);
     color: #00BFFF;
 }
 
 h3+blockquote img {
-    position: relative;
-    transform: translateX(-80px);
+    @include blockquote-img();
     filter: drop-shadow(#00BFFF 80px 0);
-    height: 1rem;
-    margin-right: .2rem;
 }
 
 h4+blockquote,blockquote[alt="orange"]{
-    @include badge-common();
-    background-image: linear-gradient(to right, var(--sidebar),var(--sidebar)),  linear-gradient(0deg, #fc6076 0%, #ff9a44 100%);
+    @include blockquote-common();
+    background-image: linear-gradient(to right, var(--sidebar),var(--sidebar)),  linear-gradient(0deg, #fc6076, #ff9a44);
     color: #FF8C00;
 }
 
 h4+blockquote img {
-    position: relative;
-    transform: translateX(-80px);
+    @include blockquote-img();
     filter: drop-shadow(#FF8C00 80px 0);
-    height: 1rem;
-    margin-right: .2rem;
 }
 
 h5+blockquote,blockquote[alt="purple"]{
-    @include badge-common();
+    @include blockquote-common();
     background-image: linear-gradient(to right, var(--sidebar),var(--sidebar)), linear-gradient(0deg, #8F41E9, #578AEF);
     color:#8F41E9;
 }
 
 h5+blockquote img {
-    position: relative;
-    transform: translateX(-80px);
+    @include blockquote-img();
     filter: drop-shadow(#A531DC 80px 0);
-    height: 1rem;
-    margin-right: .2rem;
 }
 
 table {
