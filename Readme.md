@@ -14,7 +14,7 @@ Selected textstyle is inspired by [typora-dyzj-theme](https://github.com/muggled
 
 ## New features
 - blockquote style supports linear-gradient
-- add level 4 header animation
+- redesign header style and its focus mode
 - use `scss` format substitute original `css`
 - provide local small icon in foldername called `badge`
 

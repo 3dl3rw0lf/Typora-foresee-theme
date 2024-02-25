@@ -10,6 +10,12 @@
 
 选中样式受 [typora-dyzj-theme](https://github.com/muggledy/typora-dyzj-theme) 启发
 
+## 新特点
+- 引用块样式支持渐变色
+- 重新调整标题样式，添加专注模式下样式
+- 使用 `scss` 格式替代原先的 `css`
+- 在文件夹`badge`友情提供小图标
+
 ## 如何使用
 
 1. 克隆仓库,或者[下载压缩包](https://github.com/passwordgloo/Typora-foresee-theme/archive/refs/heads/study.zip)
@@ -24,11 +30,11 @@
 
 ### 浅色模式
 
-![](https://user-images.githubusercontent.com/90091016/271819047-8310cd64-8baf-4310-a273-85c8a51d6305.png)
+![](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/b5caf62b-6b51-4556-8b72-c66bc9f7378d)
 
 ### 深色模式
 
-![](https://user-images.githubusercontent.com/90091016/271819107-cd27fc6a-b813-41f0-b685-815630513b35.png)
+![](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/221dc044-eaf5-48fe-94ab-1db05c180379)
 
 ## 个性化
 

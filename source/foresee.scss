@@ -71,6 +71,7 @@ h2 {
 
 #write>h2.md-focus {
     border-left-color: var(--focus-color);
+    transition:border-left-color .5s linear;
 }
 
 h3 {
@@ -87,8 +88,14 @@ h3 {
     }
 }
 
-#write>h3.md-focus {
-    border-color: var(--focus-color);
+#write>h3.md-focus::after {
+    content:'';
+    display: block;
+    width:5rem;
+    height:.3rem;
+    background-color: var(--focus-color);
+    border-radius: .5rem;
+    transition:background-color .5s linear;
 }
 
 h4 {
@@ -97,6 +104,11 @@ h4 {
     line-height: 1.43;
     border-bottom: 1px dashed var(--theme-color);
     @include header-common();
+}
+
+#write>h4.md-focus {
+    border-bottom-color: var(--focus-color);
+    transition:border-bottom-color .5s linear;
 }
 
 h5 {
