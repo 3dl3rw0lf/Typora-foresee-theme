@@ -453,7 +453,7 @@ em {
   border-bottom: 4px dotted var(--focus-color);
 }
 
-del {
+u {
   text-decoration-style: wavy;
   text-decoration-line: underline;
   text-decoration-color: var(--focus-color);
