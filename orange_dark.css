@@ -1,8 +1,14 @@
 @charset "UTF-8";
 @import "source/foresee.min.css";
-@import "source/codedark.css";
+@import "source/codeDark.min.css";
 
-/* theme-color: #FF6347(tomato)  #FF00FF(violet) #00BFFF(sky) #00CD66(grass) #FF8C00(orange)*/
+/* theme-color: 
+#FF6347(tomato)  
+#FF00FF(violet) 
+#00BFFF(sky) 
+#00CD66(grass)
+#FF8C00(orange)
+*/
 
 :root {
     --display: #FFFFFF;
