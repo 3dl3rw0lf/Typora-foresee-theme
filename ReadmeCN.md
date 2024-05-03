@@ -24,7 +24,7 @@
 
 - 宽屏渐变引用块样式
 
-```
+```html
 <blockquote alt="black-alt">Content</blockquote>
 <blockquote alt="blue-alt">Content</blockquote>
 <blockquote alt="green-alt">Content</blockquote>
@@ -52,7 +52,7 @@
 
 ## 个性化
 
-修改XXX-light(dark).css文件中代码以获得个性化体验
+修改XXX_light(dark).css文件中代码以获得个性化体验
 
 ```css
 :root {

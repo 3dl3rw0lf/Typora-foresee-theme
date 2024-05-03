@@ -29,7 +29,7 @@ Selected textstyle is inspired by [typora-dyzj-theme](https://github.com/muggled
 
 - Wide-screen  linear-gradient blockquote style
 
-```
+```html
 <blockquote alt="black-alt">Content</blockquote>
 <blockquote alt="blue-alt">Content</blockquote>
 <blockquote alt="green-alt">Content</blockquote>
@@ -59,7 +59,7 @@ Selected textstyle is inspired by [typora-dyzj-theme](https://github.com/muggled
 
 ## Personalities
 
-Modify code in XXX-light(dark).css so that you can make your own personal style
+Modify code in XXX_light(dark).css so that you can make your own personal style
 
 ```css
 :root {
