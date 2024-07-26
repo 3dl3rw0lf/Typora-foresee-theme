@@ -4,6 +4,8 @@
 
 ![](https://user-images.githubusercontent.com/90091016/271819148-aa5cd28e-6876-4729-9865-e29001e1147c.png)中文	|	![](https://user-images.githubusercontent.com/90091016/271819155-72fe5b24-cd1c-4ceb-a32d-e559dbcaea63.png)[English](Readme.md)
 
+---
+
 ## 感谢
 
 基于默认主题`night`修改
@@ -29,12 +31,14 @@
 
 ### 代码样式
 
-1. 访问  [Codemirror 5 主题](https://codemirror.net/5/theme/) 挑选你钟意的样式
+支持代码块自定义光标颜色
 
-2. 复制粘贴代码到`codeDark.min.css`或者 `codeLight.min.css`文件
+你也可以使用下列步骤选择自己喜欢的代码样式
 
-
-![codemirror5](https://img.picgo.net/2024/07/24/codemirror54cc8fc0221a6cac1.png)
+```text
+1. 访问 https://codemirror.net/5/theme
+2. 复制并粘贴到codeDark.min.css或codeLight.min.css文件
+```
 
 ### 引用块
 
@@ -53,7 +57,7 @@
 <blockquote alt="purple">Content</blockquote>
 ```
 
-![blockquote](https://img.picgo.net/2024/05/03/blockquote71e1163604ef2a7f.png)
+![blockquote](https://img.picgo.net/2024/07/27/blockquote05d03cd6d56e4b65.jpg)
 
 3. 宽屏渐变引用块样式
 
@@ -65,8 +69,7 @@
 <blockquote alt="purple-alt">Content</blockquote>
 ```
 
-
-![blockquote alt](https://img.picgo.net/2024/05/27/blockquote_alt0d0c1a262a87e616.png)
+![blockquote alt](https://img.picgo.net/2024/07/26/blockquote-alte97861e171de2b02.jpg)
 
 4. 引用块样式随标题不同而不同
 
@@ -78,7 +81,7 @@
 
 ### 图标
 
-- 在文件夹`badge`友情提供小图标
+- 在文件夹`icon`友情提供小图标
 
 > 复制并保存到电脑本地固定位置，图片直接引用文件即可
 
@@ -117,7 +120,7 @@
 
 ### 深色模式
 
-![](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/221dc044-eaf5-48fe-94ab-1db05c180379)
+![dark en](https://img.picgo.net/2024/05/03/dark_en60fbd4000b16c900.png)
 
 ## 项目用途
 

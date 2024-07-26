@@ -29,10 +29,14 @@ Selected textstyle is inspired by [typora-dyzj-theme](https://github.com/muggled
 
 ### Code Style
 
-1. Via [Codemirror 5 theme](https://codemirror.net/5/theme/) and pick out your favorite style
-2. Copy and paste code in `codeDark.min.css` or `codeLight.min. css` file
+Support custom cursor color
 
-![codemirror5](https://img.picgo.net/2024/07/24/codemirror54cc8fc0221a6cac1.png)
+You can also use the following steps to choose your favorite style
+
+```text
+1. Via https://codemirror.net/5/theme
+2. Copy and paste code in `codeDark.min.css` or `codeLight.min. css` file
+```
 
 ### Blockquote
 
@@ -51,7 +55,7 @@ You can type <kbd>></kbd> to insert blockquote by default
 <blockquote alt="purple">Content</blockquote>
 ```
 
-![blockquote](https://img.picgo.net/2024/05/03/blockquote71e1163604ef2a7f.png)
+![blockquote](https://img.picgo.net/2024/07/27/blockquote05d03cd6d56e4b65.jpg)
 
 3. Wide-screen  linear-gradient blockquote style
 
@@ -63,7 +67,7 @@ You can type <kbd>></kbd> to insert blockquote by default
 <blockquote alt="purple-alt">Content</blockquote>
 ```
 
-![blockquote alt](https://img.picgo.net/2024/05/27/blockquote_alt0d0c1a262a87e616.png)
+![blockquote alt](https://img.picgo.net/2024/07/26/blockquote-alte97861e171de2b02.jpg)
 
 4. Blockquote style can change its color when it close to heading
 
