@@ -35,7 +35,7 @@ You can also use the following steps to choose your favorite style
 
 ```text
 1. Via https://codemirror.net/5/theme
-2. Copy and paste code in `codeDark.min.css` or `codeLight.min. css` file
+2. Copy and paste code in codeDark.min.css or codeLight.min.css file
 ```
 
 ### Blockquote
