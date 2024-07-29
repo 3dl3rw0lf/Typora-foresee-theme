@@ -33,13 +33,6 @@
 
 支持代码块自定义光标颜色
 
-你也可以使用下列步骤选择自己喜欢的代码样式
-
-```text
-1. 访问 https://codemirror.net/5/theme
-2. 复制并粘贴到codeDark.min.css或codeLight.min.css文件
-```
-
 ### 引用块
 
 1. 默认引用块样式使用单色
@@ -93,23 +86,51 @@
 
 ## 个性化[可选]
 
-修改XXX_light(dark).css文件中代码以获得个性化体验
+修改light(dark).scss文件中代码以获得个性化体验
 
-```css
-:root {
-    --display: #666;
-    --article: #FFF;
-    --sidebar: #F2F2F2;
-    --text-color: #323232;
-    --theme-color: #FF8C00;
-    --focus-color: #00CD66;
-    --bg-color: var(--article);
-    --primary-color: var(--theme-color);
-    --rawblock-edit-panel-bd: var(--sidebar);
-    --item-hover-bg-color: var(--theme-color);
-    --control-text-hover-color: var(--theme-color);
-    --font-family: "Microsoft YaHei", "Arial", "sans-serif";
-}
+```scss
+$display: (
+  light:#666,
+  dark:#FFF
+);
+
+$article: (
+  light:#FFF,
+  dark:#323232
+);
+
+$sidebar: (
+  light: #F2F2F2,
+  dark: #3E3E3E
+);
+
+$textColor: (
+  light:#323232,
+  dark:#DEDEDE
+);
+
+// themeColor:
+/* 
+#FF6347(tomato)  
+#FF00FF(violet) 
+#00BFFF(sky) 
+#00CD66(grass)
+#FF8C00(orange)
+*/
+
+$themeColor:#FF6347;
+
+//focusColor
+/* 
+#00CD66--green
+00BFFF--blue
+FF00FF--violet 
+*/
+
+
+$focusColor:#00BFFF;
+
+$font-family:"Microsoft YaHei", "PingFang SC", "Arial", "sans-serif";
 ```
 
 ## 预览

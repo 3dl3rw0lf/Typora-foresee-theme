@@ -31,13 +31,6 @@ Selected textstyle is inspired by [typora-dyzj-theme](https://github.com/muggled
 
 Support custom cursor color
 
-You can also use the following steps to choose your favorite style
-
-```text
-1. Via https://codemirror.net/5/theme
-2. Copy and paste code in codeDark.min.css or codeLight.min.css file
-```
-
 ### Blockquote
 
 1. Default blockquote style use theme single color
@@ -87,23 +80,50 @@ Provide local small icon in foldername called `icon`
 
 ## Personalities
 
-Modify code in XXX_light(dark).css so that you can make your own personal style
+Modify code in light(dark).scss so that you can make your own personal style
 
-```css
-:root {
-    --display: #666;
-    --article: #FFF;			
-    --sidebar: #F2F2F2;
-    --text-color: #323232;
-    --theme-color: #FF8C00;
-    --focus-color: #00CD66;
-    --bg-color: var(--article);
-    --primary-color: var(--theme-color);
-    --rawblock-edit-panel-bd: var(--sidebar);
-    --item-hover-bg-color: var(--theme-color);
-    --control-text-hover-color: var(--theme-color);
-    --font-family: "Microsoft YaHei", "Arial", "sans-serif";
-}
+```scss
+$display: (
+  light:#666,
+  dark:#FFF
+);
+
+$article: (
+  light:#FFF,
+  dark:#323232
+);
+
+$sidebar: (
+  light: #F2F2F2,
+  dark: #3E3E3E
+);
+
+$textColor: (
+  light:#323232,
+  dark:#DEDEDE
+);
+
+// themeColor:
+/* 
+#FF6347(tomato)  
+#FF00FF(violet) 
+#00BFFF(sky) 
+#00CD66(grass)
+#FF8C00(orange)
+*/
+
+$themeColor:#FF6347;
+
+//focusColor
+/* 
+#00CD66--green
+00BFFF--blue
+FF00FF--violet 
+*/
+
+$focusColor:#00BFFF;
+
+$font-family:"Microsoft YaHei", "PingFang SC", "Arial", "sans-serif";
 ```
 
 ## Tutorial
