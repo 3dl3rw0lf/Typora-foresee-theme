@@ -27,7 +27,7 @@ $textColor: (
 #FF8C00(orange)
 */
 
-$themeColor:#FF6347;
+$themeColor:#00CD66;
 
 //focusColor
 /* 
@@ -36,17 +36,16 @@ $themeColor:#FF6347;
 FF00FF--violet 
 */
 
-
-$focusColor:#00BFFF;
+$focusColor:#FF00FF;
 
 $font-family:"Microsoft YaHei", "PingFang SC", "Arial", "sans-serif";
 
 :root {
---bg-color: map-get($article, dark);
+--bg-color: map-get($article, light);
 --select-text-bg-color: #666;
---text-color:map-get($textColor,dark);
+--text-color:map-get($textColor,light);
 --primary-color: $themeColor;
---rawblock-edit-panel-bd: map-get($sidebar, dark);
+--rawblock-edit-panel-bd: map-get($sidebar, light);
 --item-hover-bg-color: $themeColor;
 --control-text-hover-color: $themeColor;
 }
@@ -83,9 +82,9 @@ body {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   font-family: $font-family;
-  color: map-get($textColor, dark);
+  color: map-get($textColor, light);
   line-height: 1.6;
-  background-color: map-get($article, dark );
+  background-color: map-get($article, light );
   caret-color: $themeColor;
 }
 
@@ -194,7 +193,7 @@ h5 {
 }
 
 sup.md-footnote {
-  background-color: map-get($sidebar,dark );
+  background-color: map-get($sidebar,light );
   color: $themeColor;
 }
 
@@ -209,7 +208,7 @@ p.md-focus>span.md-plain.md-expand {
 }
 
 a {
-  color: map-get($textColor, dark);
+  color: map-get($textColor, light);
   text-decoration: none;
   border-bottom: 2px solid $themeColor;
 }
@@ -326,7 +325,7 @@ li::marker {
 blockquote {
   @include blockquote-common();    
   color: $themeColor;
-  background-image: linear-gradient(to right, map-get($sidebar,dark ),map-get($sidebar,dark )), linear-gradient(0deg,$themeColor 0%,$themeColor 100%);
+  background-image: linear-gradient(to right, map-get($sidebar,light ),map-get($sidebar,light )), linear-gradient(0deg,$themeColor 0%,$themeColor 100%);
   color: #00CD66;
   img {
       @include blockquote-img();
@@ -336,7 +335,7 @@ blockquote {
 
 h2+blockquote,blockquote[alt="green"]{
   @include blockquote-common();
-  background-image: linear-gradient(to right, map-get($sidebar,dark ),map-get($sidebar,dark )), linear-gradient(0deg,#00e3ae 0%,#9be15d 100%);
+  background-image: linear-gradient(to right, map-get($sidebar,light ),map-get($sidebar,light )), linear-gradient(0deg,#00e3ae 0%,#9be15d 100%);
   color: #00CD66;
   //change svg color
   img {
@@ -348,7 +347,7 @@ h2+blockquote,blockquote[alt="green"]{
 
 h3+blockquote,blockquote[alt="blue"]{
   @include blockquote-common();
-  background-image: linear-gradient(to right, map-get($sidebar,dark ),map-get($sidebar,dark )), linear-gradient(0deg,#4facfe 0%, #00f2fe 100%);
+  background-image: linear-gradient(to right, map-get($sidebar,light ),map-get($sidebar,light )), linear-gradient(0deg,#4facfe 0%, #00f2fe 100%);
   color: #00BFFF;
   img {
       @include blockquote-img();
@@ -358,7 +357,7 @@ h3+blockquote,blockquote[alt="blue"]{
 
 h4+blockquote,blockquote[alt="orange"]{
   @include blockquote-common();
-  background-image: linear-gradient(to right, map-get($sidebar,dark ),map-get($sidebar,dark )),  linear-gradient(0deg, #fc6076, #ff9a44);
+  background-image: linear-gradient(to right, map-get($sidebar,light ),map-get($sidebar,light )),  linear-gradient(0deg, #fc6076, #ff9a44);
   color: #FF8C00;
   img {
       @include blockquote-img();
@@ -368,7 +367,7 @@ h4+blockquote,blockquote[alt="orange"]{
 
 h5+blockquote,blockquote[alt="purple"]{
   @include blockquote-common();
-  background-image: linear-gradient(to right, map-get($sidebar,dark ),map-get($sidebar,dark )), linear-gradient(0deg, #8F41E9, #578AEF);
+  background-image: linear-gradient(to right, map-get($sidebar,light ),map-get($sidebar,light )), linear-gradient(0deg, #8F41E9, #578AEF);
   color:#8F41E9;
   img {
       @include blockquote-img();
@@ -427,8 +426,8 @@ table {
       text-align: left;
 
       &::selection {
-          background-color: map-get($article, dark );
-          color: map-get($display, dark );
+          background-color: map-get($article, light );
+          color: map-get($display, light );
       }
   }
 }
@@ -452,7 +451,7 @@ table th {
 
 mark {
   background-color: $focusColor;
-  color: map-get($sidebar,dark );
+  color: map-get($sidebar,light );
 }
 
 /* -----------------------editor------------------------ */
@@ -471,15 +470,15 @@ mark {
 
 #top-titlebar,
 #top-titlebar * {
-  color: map-get($display, dark );
+  color: map-get($display, light );
 }
 
 /* ymal */
 #write pre.md-meta-block {
-  color: map-get($textColor, dark);
+  color: map-get($textColor, light);
   padding: 1em;
   line-height: 1.6em;
-  background: map-get($sidebar,dark );
+  background: map-get($sidebar,light );
   border: 5%;
 }
 
@@ -489,7 +488,7 @@ code {
   margin-right: .4em;
   color: $themeColor;
   border-radius: 4px;
-  background-color: map-get($sidebar,dark );
+  background-color: map-get($sidebar,light );
 }
 
 kbd {
@@ -499,7 +498,7 @@ kbd {
   border-radius: 4px;
   border: none;
   box-shadow: 0 0 3px 0 $themeColor;
-  background-color: map-get($article, dark );
+  background-color: map-get($article, light );
 }
 
 em {
@@ -517,12 +516,12 @@ pre.md-fences {
   padding: 10px 10px 10px 30px;
   margin-bottom: 20px;
   /* Just use for ubuntu*/
-  background-color:map-get($sidebar,dark );
+  background-color:map-get($sidebar,light );
 }
 
 #ty-tooltip {
-  background-color: map-get($article, dark );
-  color: map-get($textColor, dark);
+  background-color: map-get($article, light );
+  color: map-get($textColor, light);
 }
 
 /* task list */
@@ -562,7 +561,7 @@ pre.md-fences {
 #typora-sidebar {
   box-shadow: none;
   border-right: none;
-  background-color: map-get($sidebar,dark );
+  background-color: map-get($sidebar,light );
 }
 
 .sidebar-tabs {
@@ -577,7 +576,7 @@ pre.md-fences {
 .active-tab-files #info-panel-tab-file:hover,
 .active-tab-outline #info-panel-tab-outline,
 .active-tab-outline #info-panel-tab-outline:hover {
-  color: map-get($display, dark );
+  color: map-get($display, light );
 }
 
 /* outline */
@@ -594,19 +593,19 @@ pre.md-fences {
 /* user config  background */
 .megamenu-content,
 .megamenu-opened header {
-  background: map-get($article, dark );
+  background: map-get($article, light );
 }
 
 /* bottom-word-count */
 .typora-sourceview-on #toggle-sourceview-btn,
 #footer-word-count:hover,
 .ty-show-word-count #footer-word-count {
-  background: map-get($sidebar,dark );
+  background: map-get($sidebar,light );
 }
 
 #toggle-sourceview-btn:hover {
-  color: map-get($textColor, dark);
-  background: map-get($sidebar,dark );
+  color: map-get($textColor, light);
+  background: map-get($sidebar,light );
 }
 
 /* focus mode */
@@ -640,7 +639,7 @@ pre.md-fences {
 /* user config menu */
 .megamenu-content,
 .megamenu-opened header {
-  background: map-get($sidebar,dark );
+  background: map-get($sidebar,light );
 }
 
 .megamenu-menu-panel h2,
@@ -670,19 +669,19 @@ pre.md-fences {
 }
 
 .megamenu-menu {
-  background-color: map-get($article, dark );
+  background-color: map-get($article, light );
 }
 
 #megamenu-menu-list>li>a {
   border: none;
-  color: map-get($textColor, dark);
+  color: map-get($textColor, light);
 }
 
 .megamenu-menu-header .megamenu-menu-header-title-menu,
 .megamenu-menu-header:focus .megamenu-menu-header-title-back,
 .megamenu-menu-header:hover .megamenu-menu-header-title-back {
   display: block;
-  color: map-get($textColor, dark);
+  color: map-get($textColor, light);
 }
 
 .btn-default:hover,
@@ -742,7 +741,7 @@ pre.md-fences {
 .sidebar-footer-item:hover,
 .footer-item:hover {
   background: inherit;
-  color: map-get($textColor, dark);
+  color: map-get($textColor, light);
 }
 
 .ty-side-sort-btn.active,
@@ -754,15 +753,15 @@ pre.md-fences {
 #sidebar-files-menu {
   border: solid 1px;
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.79);
-  background-color: map-get($sidebar,dark );
+  background-color: map-get($sidebar,light );
 }
 
 .ty-preferences input[type="search"] {
   border-color: $themeColor;
-  background: map-get($sidebar,dark );
+  background: map-get($sidebar,light );
   line-height: 22px;
   border-radius: 6px;
-  color: map-get($textColor, dark);
+  color: map-get($textColor, light);
 }
 
 .ty-preferences input[type="search"]:focus {
@@ -791,7 +790,7 @@ pre.md-fences {
 }
 
 .file-library-node.active>.file-node-background {
-  background-color: map-get($article, dark );
+  background-color: map-get($article, light );
   border-color: $themeColor;
 }
 
@@ -814,7 +813,7 @@ footer.ty-footer {
 }
 
 .ty-preferences .btn-default:hover {
-  background: map-get($sidebar,dark );
+  background: map-get($sidebar,light );
 }
 
 .ty-preferences select {

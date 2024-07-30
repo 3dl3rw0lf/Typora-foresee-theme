@@ -25,8 +25,6 @@
 
 - 使用 `scss` 格式替代原先的 `css`
 
-- 自带教程文档及Wiki
-
 ## 突出亮点
 
 ### 代码样式
@@ -109,24 +107,7 @@ $textColor: (
   dark:#DEDEDE
 );
 
-// themeColor:
-/* 
-#FF6347(tomato)  
-#FF00FF(violet) 
-#00BFFF(sky) 
-#00CD66(grass)
-#FF8C00(orange)
-*/
-
 $themeColor:#FF6347;
-
-//focusColor
-/* 
-#00CD66--green
-00BFFF--blue
-FF00FF--violet 
-*/
-
 
 $focusColor:#00BFFF;
 

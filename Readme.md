@@ -16,14 +16,13 @@ Selected textstyle is inspired by [typora-dyzj-theme](https://github.com/muggled
 
 1. Clone this repository or [download zip](https://github.com/passwordgloo/Typora-foresee-theme/archive/refs/heads/study.zip)
 2. Typora open Settings>Apperance>Theme，click the button`open theme folder`
-3. Copy and paste into the theme folder
+3. Copy and paste files into the theme folder
 
 ## Features
 
 - User defined color configuration
 - Modular design approach adapts to diverse needs
 - Use `scss` format substitute original `css`
-- Comes with tutorial documents and Wiki
 
 ## BREAKING CHANGES
 
@@ -103,23 +102,7 @@ $textColor: (
   dark:#DEDEDE
 );
 
-// themeColor:
-/* 
-#FF6347(tomato)  
-#FF00FF(violet) 
-#00BFFF(sky) 
-#00CD66(grass)
-#FF8C00(orange)
-*/
-
 $themeColor:#FF6347;
-
-//focusColor
-/* 
-#00CD66--green
-00BFFF--blue
-FF00FF--violet 
-*/
 
 $focusColor:#00BFFF;
 
