@@ -30,6 +30,8 @@ Selected textstyle is inspired by [typora-dyzj-theme](https://github.com/muggled
 
 Support custom cursor color
 
+Please go to Preferences>Markdown> to turn on `displaying line numbers` for a better experience
+
 ### Blockquote
 
 1. Default blockquote style use theme single color
