@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_图层_2" data-name="图层_2" xmlns="http://www.w3.org/2000/svg" width="4" height="14.7" viewBox="0 0 4 14.7">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="_图层_2-2" data-name="_图层_2">
+    <g id="_图层_1-2">
+      <g>
+        <path class="cls-1" d="M4,12.7c0-1.15-.85-2-2-2s-2,.85-2,2,.85,2,2,2,2-.85,2-2Z"/>
+        <path class="cls-1" d="M0,.71l.28,7.54c0,.36.28.71.57.71h2.14c.28,0,.43-.36.43-.71l.28-7.54c0-.36-.28-.71-.43-.71H.57c-.28,0-.57.36-.57.71Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

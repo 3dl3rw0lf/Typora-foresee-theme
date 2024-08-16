@@ -1,3 +1,5 @@
+// custom color
+
 $display: (
   light:#666,
   dark:#FFF
@@ -27,7 +29,7 @@ $textColor: (
 #FF8C00(orange)
 */
 
-$themeColor:#FF6347;
+$themeColor:#ff8c00;
 
 //focusColor
 /* 
@@ -36,7 +38,19 @@ $themeColor:#FF6347;
 FF00FF--violet 
 */
 
-$focusColor:#00BFFF;
+$focusColor:#00CD66;
+
+$black-gradient:linear-gradient(to right, #596164, #868f96);
+
+$blue-gradient:linear-gradient(to right, #005bea 0%, #00c6fb 100%);
+
+$orange-gradient: linear-gradient(to right, #fc6076 0%, #ff9a44 100%);
+
+$purple-gradient: linear-gradient(to right, #c471f5 0%, #fa71cd 100%);
+
+$green-gradient:linear-gradient(to right, #0ba360, #8ed451);
+
+$border-radius:6px;
 
 $font-family:"Microsoft YaHei", "PingFang SC", "Arial", "sans-serif";
 
@@ -218,27 +232,32 @@ a {
   margin-left: .2em;
   padding: 0 .5em;
   color: white;
-  border-radius: 5%;
+  border-radius: $border-radius;
 }
 
 span[alt="black"] {
   @include badge-common();
-  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  background-image: $black-gradient;
 }
 
 span[alt="blue"] {
   @include badge-common();
-  background-image: linear-gradient(to right, #00c6fb 0%, #005bea 100%);
+  background-image: $blue-gradient
 }
 
 span[alt="orange"] {
   @include badge-common();
-  background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+  background-image: $orange-gradient
 }
 
 span[alt="purple"] {
   @include badge-common();
-  background-image: linear-gradient(to right, #ec77ab 0%, #7873f5 100%);
+  background-image: $purple-gradient
+}
+
+span[alt="green"] {
+  @include badge-common();
+  background-image: $green-gradient
 }
 
 p,
@@ -291,7 +310,7 @@ li::marker {
   min-height: 1.5rem;
   margin: 1em 0;
   padding: 12px 0 8px 10px;
-  border-radius:6px;
+  border-radius:$border-radius;
   border-left: 8px solid transparent;
   background-clip: padding-box, border-box;
   background-origin: padding-box, border-box;
@@ -377,7 +396,7 @@ h5+blockquote,blockquote[alt="purple"]{
 
 blockquote[alt="black-alt"]{
   @include blockquote_alt(); 
-  background-image: linear-gradient(to right, #596164, #868f96), linear-gradient(90deg, #596164, #868f96); 
+  background-image: $black-gradient, linear-gradient(90deg, #596164, #868f96); 
   img {
       @include blockquote_alt_img();
   }
@@ -385,7 +404,7 @@ blockquote[alt="black-alt"]{
 
 blockquote[alt="orange-alt"]{
   @include blockquote_alt(); 
-  background-image: linear-gradient(to right, #fc6076, #ff9a44), linear-gradient(90deg, #fc6076, #ff9a44); 
+  background-image: $orange-gradient, linear-gradient(90deg, #fc6076, #ff9a44); 
   img {
       @include blockquote_alt_img();
   }
@@ -393,7 +412,7 @@ blockquote[alt="orange-alt"]{
 
 blockquote[alt="blue-alt"]{
   @include blockquote_alt(); 
-  background-image: linear-gradient(to right, #4481eb, #04befe), linear-gradient(90deg, #4481eb, #04befe); 
+  background-image: $blue-gradient, linear-gradient(90deg, #005bea , #00c6fb); 
   img {
       @include blockquote_alt_img();
   }
@@ -401,7 +420,7 @@ blockquote[alt="blue-alt"]{
 
 blockquote[alt="purple-alt"]{
   @include blockquote_alt(); 
-  background-image: linear-gradient(to right, #8F41E9, #578AEF), linear-gradient(90deg, #8F41E9, #578AEF); 
+  background-image: $purple-gradient, linear-gradient(90deg, #c471f5, #fa71cd); 
   img {
       @include blockquote_alt_img();
   }
@@ -409,9 +428,79 @@ blockquote[alt="purple-alt"]{
 
 blockquote[alt="green-alt"]{
   @include blockquote_alt(); 
-  background-image: linear-gradient(to right, #0ba360, #8ed451), linear-gradient(90deg, #0ba360, #8ed451); 
+  background-image: $green-gradient, linear-gradient(90deg, #0ba360, #8ed451); 
   img {
       @include blockquote_alt_img();
+  }
+}
+
+@mixin bar{
+  padding: 10px 20px;
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@mixin bar_icon{
+  margin-left: -2rem;
+  margin-right:1rem;
+  text-align:center;
+  width:2.5rem;
+  height:1.5rem;
+  border-radius: 50%;
+  border:3px solid white
+}
+
+bar[class="warning"] {
+  @include bar();
+  background: $orange-gradient;
+  &::before {
+    content: url("icon/tanhao.svg");
+    @include bar_icon();
+    background: $orange-gradient;
+  }
+}
+
+bar[class="info"] {
+  @include bar();
+  background: $blue-gradient;
+  &::before {
+    content: url("icon/info.svg");
+    @include bar_icon();
+    background: $blue-gradient;
+  }
+}
+
+bar[class="tip"] {
+  @include bar();
+  background: $green-gradient;
+  &::before {
+    content: url("icon/question.svg");
+    @include bar_icon();
+    background: $green-gradient;
+  }
+}
+
+bar[class="note"] {
+  @include bar();
+  background: $black-gradient;
+  &::before {
+    content: url("icon/info.svg");
+    @include bar_icon();
+    background: $black-gradient;
+  }
+}
+
+bar[class="important"] {
+  @include bar();
+  background: $purple-gradient;
+  &::before {
+    content: url("icon/tanhao.svg");
+    @include bar_icon();
+    background: $purple-gradient;
   }
 }
 
