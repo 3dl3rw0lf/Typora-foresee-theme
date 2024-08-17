@@ -1,4 +1,12 @@
-// custom color
+/* 
+version:0.0.3.6
+author:passwordgloo
+mode:dark_theme
+repo:https://github.com/passwordgloo/Typora-foresee-theme
+license:MIT
+*/
+
+// Custom colors
 
 $display: (
   light:#666,
@@ -20,49 +28,55 @@ $textColor: (
   dark:#DEDEDE
 );
 
-// themeColor:
-/* 
-#FF6347(tomato)  
-#FF00FF(violet) 
-#00BFFF(sky) 
-#00CD66(grass)
-#FF8C00(orange)
-*/
+$tomato:#FF6347;
 
-$themeColor:#ff8c00;
+$purple:#FF00FF;
 
-//focusColor
-/* 
-#00CD66--green
-00BFFF--blue
-FF00FF--violet 
-*/
+$blue:#00BFFF;
 
-$focusColor:#00CD66;
+$green:#00CD66;
 
-$black-gradient:linear-gradient(to right, #596164, #868f96);
+$orange:#FF8C00;
 
-$blue-gradient:linear-gradient(to right, #005bea 0%, #00c6fb 100%);
+/* You can change theme color and focus color */
 
-$orange-gradient: linear-gradient(to right, #fc6076 0%, #ff9a44 100%);
+$themeColor:$green;
 
-$purple-gradient: linear-gradient(to right, #c471f5 0%, #fa71cd 100%);
+$focusColor:$purple;
 
-$green-gradient:linear-gradient(to right, #0ba360, #8ed451);
+:root {
+  --bg-color: map-get($article, dark);
+  --select-text-bg-color: #666;
+  --text-color:map-get($textColor,dark);
+  --primary-color: $themeColor;
+  --rawblock-edit-panel-bd: map-get($sidebar, dark);
+  --item-hover-bg-color: $themeColor;
+  --control-text-hover-color: $themeColor;
+}
+
+/* gradient colors */
+
+$black-gradient:#596164 0%, #868f96 100%;
+
+$blue-gradient: #005bea 0%, #00c6fb 100%;
+
+$orange-gradient: #fc6076 0%, #ff9a44 100%;
+
+$purple-gradient: #c471f5 0%, #fa71cd 100%;
+
+$green-gradient:#0ba360 0%, #8ed451 100%;
+
+// Custom fonts and style
 
 $border-radius:6px;
 
 $font-family:"Microsoft YaHei", "PingFang SC", "Arial", "sans-serif";
 
-:root {
---bg-color: map-get($article, dark);
---select-text-bg-color: #666;
---text-color:map-get($textColor,dark);
---primary-color: $themeColor;
---rawblock-edit-panel-bd: map-get($sidebar, dark);
---item-hover-bg-color: $themeColor;
---control-text-hover-color: $themeColor;
-}
+/* you can change default page width
+#write {
+  max-width: 914px;
+} 
+*/
 
 //scrollbar style
 ::-webkit-scrollbar-thumb {
@@ -101,12 +115,6 @@ body {
   background-color: map-get($article, dark );
   caret-color: $themeColor;
 }
-
-//page width
-/* #write {
-  max-width: 914px;
-} 
-*/
 
 //header style
 @mixin header-common{
@@ -203,7 +211,7 @@ h5 {
   width: auto;
   height: auto;
   background-color: $focusColor;
-  color: #ffffff;
+  color: white;
 }
 
 sup.md-footnote {
@@ -237,27 +245,27 @@ a {
 
 span[alt="black"] {
   @include badge-common();
-  background-image: $black-gradient;
+  background-image: linear-gradient(to right,$black-gradient);
 }
 
 span[alt="blue"] {
   @include badge-common();
-  background-image: $blue-gradient
+  background-image: linear-gradient(to right,$blue-gradient);
 }
 
 span[alt="orange"] {
   @include badge-common();
-  background-image: $orange-gradient
+  background-image: linear-gradient(to right,$orange-gradient);
 }
 
 span[alt="purple"] {
   @include badge-common();
-  background-image: $purple-gradient
+  background-image: linear-gradient(to right,$purple-gradient);
 }
 
 span[alt="green"] {
   @include badge-common();
-  background-image: $green-gradient
+  background-image: linear-gradient(to right,$green-gradient);
 }
 
 p,
@@ -317,9 +325,18 @@ li::marker {
   overflow: hidden;
 }
 
-@mixin blockquote-img {
+// windows blockquote icon
+/* @mixin blockquote-img {
   position: relative;
   transform: translateX(-80px);
+  height: 1rem;
+  margin-right: .2rem;
+} */
+
+// mac blockquote icon
+@mixin blockquote-img {
+  position: relative;
+  transform: translateY(26.8px);
   height: 1rem;
   margin-right: .2rem;
 }
@@ -345,66 +362,66 @@ blockquote {
   @include blockquote-common();    
   color: $themeColor;
   background-image: linear-gradient(to right, map-get($sidebar,dark ),map-get($sidebar,dark )), linear-gradient(0deg,$themeColor 0%,$themeColor 100%);
-  color: #00CD66;
+  color: map-get($article,light);
   img {
       @include blockquote-img();
-      filter: drop-shadow($themeColor 80px 0);
+      filter: drop-shadow($themeColor 0px -28px);
   }
 }
 
 h2+blockquote,blockquote[alt="green"]{
   @include blockquote-common();
-  background-image: linear-gradient(to right, map-get($sidebar,dark ),map-get($sidebar,dark )), linear-gradient(0deg,#00e3ae 0%,#9be15d 100%);
-  color: #00CD66;
+  background-image: linear-gradient(to right, map-get($sidebar,dark ),map-get($sidebar,dark )), linear-gradient(0deg,$green-gradient);
+  color: $green;
   //change svg color
   img {
       @include blockquote-img();
-      filter: drop-shadow(#00CD66 80px 0);
-      
+      filter: drop-shadow($green 0px -28px);
   }
 }
 
 h3+blockquote,blockquote[alt="blue"]{
   @include blockquote-common();
-  background-image: linear-gradient(to right, map-get($sidebar,dark ),map-get($sidebar,dark )), linear-gradient(0deg,#4facfe 0%, #00f2fe 100%);
-  color: #00BFFF;
+  background-image: linear-gradient(to right, map-get($sidebar,dark ),map-get($sidebar,dark )), linear-gradient(0deg,$blue-gradient);
+  color: $blue;
   img {
       @include blockquote-img();
-      filter: drop-shadow(#00BFFF 80px 0);
+      filter: drop-shadow($blue 0px -28px);
   }
 }
 
 h4+blockquote,blockquote[alt="orange"]{
   @include blockquote-common();
-  background-image: linear-gradient(to right, map-get($sidebar,dark ),map-get($sidebar,dark )),  linear-gradient(0deg, #fc6076, #ff9a44);
-  color: #FF8C00;
+  background-image: linear-gradient(to right, map-get($sidebar,dark ),map-get($sidebar,dark )),  linear-gradient(0deg, $orange-gradient);
+  color: $orange;
   img {
       @include blockquote-img();
-      filter: drop-shadow(#FF8C00 80px 0);
+      filter: drop-shadow($orange 0px -28px);
   }
 }
 
 h5+blockquote,blockquote[alt="purple"]{
   @include blockquote-common();
-  background-image: linear-gradient(to right, map-get($sidebar,dark ),map-get($sidebar,dark )), linear-gradient(0deg, #8F41E9, #578AEF);
-  color:#8F41E9;
+  background-image: linear-gradient(to right, map-get($sidebar,dark ),map-get($sidebar,dark )), linear-gradient(0deg,$purple-gradient);
+  color:$purple;
   img {
       @include blockquote-img();
-      filter: drop-shadow(#A531DC 80px 0);
+      filter: drop-shadow($purple 0px -28px);
   }
 }
 
 blockquote[alt="black-alt"]{
   @include blockquote_alt(); 
-  background-image: $black-gradient, linear-gradient(90deg, #596164, #868f96); 
+  background-image: linear-gradient(to right,$black-gradient), linear-gradient(90deg,$black-gradient); 
   img {
       @include blockquote_alt_img();
+      filter: drop-shadow($blue 0px -28px);
   }
 }
 
 blockquote[alt="orange-alt"]{
   @include blockquote_alt(); 
-  background-image: $orange-gradient, linear-gradient(90deg, #fc6076, #ff9a44); 
+  background-image: linear-gradient(to right,$orange-gradient), linear-gradient(90deg, $orange-gradient); 
   img {
       @include blockquote_alt_img();
   }
@@ -412,7 +429,7 @@ blockquote[alt="orange-alt"]{
 
 blockquote[alt="blue-alt"]{
   @include blockquote_alt(); 
-  background-image: $blue-gradient, linear-gradient(90deg, #005bea , #00c6fb); 
+  background-image: linear-gradient(to right,$blue-gradient), linear-gradient(90deg,$blue-gradient); 
   img {
       @include blockquote_alt_img();
   }
@@ -420,7 +437,7 @@ blockquote[alt="blue-alt"]{
 
 blockquote[alt="purple-alt"]{
   @include blockquote_alt(); 
-  background-image: $purple-gradient, linear-gradient(90deg, #c471f5, #fa71cd); 
+  background-image: linear-gradient(to right,$purple-gradient), linear-gradient(90deg, $purple-gradient); 
   img {
       @include blockquote_alt_img();
   }
@@ -428,79 +445,78 @@ blockquote[alt="purple-alt"]{
 
 blockquote[alt="green-alt"]{
   @include blockquote_alt(); 
-  background-image: $green-gradient, linear-gradient(90deg, #0ba360, #8ed451); 
+  background-image: linear-gradient(to right,$green-gradient), linear-gradient(90deg, $green-gradient); 
   img {
       @include blockquote_alt_img();
   }
 }
 
-@mixin bar{
+%bar{
   padding: 10px 20px;
   border-radius: 6px;
   color: white;
-  font-size: 16px;
   display: flex;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-@mixin bar_icon{
+%bar_icon{
   margin-left: -2rem;
   margin-right:1rem;
   text-align:center;
-  width:2.5rem;
+  width:1.5rem;
   height:1.5rem;
   border-radius: 50%;
   border:3px solid white
 }
 
-bar[class="warning"] {
-  @include bar();
-  background: $orange-gradient;
+section[alt="warning"] {
+  @extend %bar;
+  background: linear-gradient(to right,$orange-gradient);
   &::before {
-    content: url("icon/tanhao.svg");
-    @include bar_icon();
-    background: $orange-gradient;
+    content: url("./foresee/icon/tanhao.svg");
+    @extend %bar_icon;
+    background: linear-gradient(to right,$orange-gradient);
   }
 }
 
-bar[class="info"] {
-  @include bar();
-  background: $blue-gradient;
+section[alt="info"] {
+  @extend %bar;
+  background: linear-gradient(to right,$blue-gradient);
   &::before {
-    content: url("icon/info.svg");
-    @include bar_icon();
-    background: $blue-gradient;
+    content: url("./foresee/icon/info.svg");
+    @extend %bar_icon;
+    background: linear-gradient(to right,$blue-gradient);
   }
 }
 
-bar[class="tip"] {
-  @include bar();
-  background: $green-gradient;
+section[alt="tip"] {
+  @extend %bar;
+  background: linear-gradient(to right,$green-gradient);
   &::before {
-    content: url("icon/question.svg");
-    @include bar_icon();
-    background: $green-gradient;
+    content: url("./foresee/icon/question.svg");
+    @extend %bar_icon;
+    background: linear-gradient(to right,$green-gradient);
   }
 }
 
-bar[class="note"] {
-  @include bar();
-  background: $black-gradient;
+section[alt="note"] {
+  @extend %bar;
+  background: linear-gradient(to right,$black-gradient);
   &::before {
-    content: url("icon/info.svg");
-    @include bar_icon();
-    background: $black-gradient;
+    content: url("./foresee/icon/info.svg");
+    @extend %bar_icon;
+    background: linear-gradient(to right,$black-gradient);
   }
 }
 
-bar[class="important"] {
-  @include bar();
-  background: $purple-gradient;
+section[alt="important"] {
+  @extend %bar;
+  background: linear-gradient(to right,$purple-gradient);
   &::before {
-    content: url("icon/tanhao.svg");
-    @include bar_icon();
-    background: $purple-gradient;
+    content: url("./foresee/icon/tanhao.svg");
+    @extend %bar_icon;
+    background: linear-gradient(to right,$purple-gradient);
   }
 }
 
@@ -597,7 +613,8 @@ em {
 
 u {
   text-decoration-style: solid;
-  text-decoration-line: underline;
+  text-decoration-line:underline;
+  text-decoration-thickness:.1rem;
   text-decoration-color: $focusColor;
 }
 
@@ -812,19 +829,19 @@ pre.md-fences {
 }
 
 /*diagrams*/
+
 #write .md-focus .md-diagram-panel {
   border: 1px solid #ddd;
   margin-left: -1px;
   width: calc(100% + 2px);
 }
 
-/*diagrams*/
 #write .md-focus.md-fences-with-lineno .md-diagram-panel {
   margin-left: auto;
 }
 
 .md-diagram-panel-error {
-  color: tomato;
+  color: $tomato;
 }
 
 .sidebar-footer-item:hover,

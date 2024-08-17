@@ -31,6 +31,8 @@
 
 支持代码块自定义光标颜色
 
+![PixPin 2024 08 18 00 01 00](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_00-01-001bbf1d3c1f79dab1.gif)
+
 请在偏好设置>Markdown>打开`显示行号`，以获得更好体验
 
 ### 引用块
@@ -50,19 +52,19 @@
 <blockquote alt="purple">Content</blockquote>
 ```
 
-![blockquote](https://img.picgo.net/2024/07/27/blockquote05d03cd6d56e4b65.jpg)
+![PixPin 2024 08 18 00 10 17](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_00-10-17b9a005d0e96c2144.png)
 
 3. 宽屏渐变引用块样式
 
 ```html
-<blockquote alt="black-alt">Content</blockquote>
-<blockquote alt="blue-alt">Content</blockquote>
-<blockquote alt="green-alt">Content</blockquote>
-<blockquote alt="orange-alt">Content</blockquote>
-<blockquote alt="purple-alt">Content</blockquote>
+<blockquote alt = 'black-alt'>black</blockquote>
+<blockquote alt = 'green-alt'>green</blockquote>
+<blockquote alt = 'blue-alt'>blue</blockquote>
+<blockquote alt = 'orange-alt'>orange</blockquote>
+<blockquote alt = 'purple-alt'>purple</blockquote>
 ```
 
-![blockquote alt](https://img.picgo.net/2024/07/26/blockquote-alte97861e171de2b02.jpg)
+![PixPin 2024 08 18 00 13 36](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_00-13-363377792b4ee10a57.png)
 
 4. 引用块样式随标题不同而不同
 
@@ -109,11 +111,55 @@ $textColor: (
   dark:#DEDEDE
 );
 
-$themeColor:#FF6347;
+$tomato:#FF6347;
 
-$focusColor:#00BFFF;
+$purple:#FF00FF;
+
+$blue:#00BFFF;
+
+$green:#00CD66;
+
+$orange:#FF8C00;
+
+/* You can change theme color and focus color */
+
+$themeColor:$green;
+
+$focusColor:$purple;
+
+:root {
+  --bg-color: map-get($article, dark);
+  --select-text-bg-color: #666;
+  --text-color:map-get($textColor,dark);
+  --primary-color: $themeColor;
+  --rawblock-edit-panel-bd: map-get($sidebar, dark);
+  --item-hover-bg-color: $themeColor;
+  --control-text-hover-color: $themeColor;
+}
+
+/* gradient colors */
+
+$black-gradient:#596164 0%, #868f96 100%;
+
+$blue-gradient: #005bea 0%, #00c6fb 100%;
+
+$orange-gradient: #fc6076 0%, #ff9a44 100%;
+
+$purple-gradient: #c471f5 0%, #fa71cd 100%;
+
+$green-gradient:#0ba360 0%, #8ed451 100%;
+
+// Custom fonts and style
+
+$border-radius:6px;
 
 $font-family:"Microsoft YaHei", "PingFang SC", "Arial", "sans-serif";
+
+/* you can change default page width
+#write {
+  max-width: 914px;
+} 
+*/
 ```
 
 ## 预览
