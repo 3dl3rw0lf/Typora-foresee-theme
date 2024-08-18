@@ -35,13 +35,11 @@ Selected textstyle is inspired by [typora-dyzj-theme](https://github.com/muggled
 
 ![PixPin 2024 08 18 00 01 00](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_00-01-001bbf1d3c1f79dab1.gif)
 
-
-
 2. Different code style based on the appearance of the system
 
-![PixPin 2024 08 18 17 20 32](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-20-320212612d5f2cd57c.png)
+![PixPin_2024-08-18_17-20-32](https://github.com/user-attachments/assets/65e3561a-565b-4641-b75c-71c9a50c40a2)
 
-![PixPin 2024 08 18 17 20 09](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-20-09e3d823ee3bc3f30f.png)
+![PixPin_2024-08-18_17-20-09](https://github.com/user-attachments/assets/859bfb5d-6a27-456f-ac78-9a5d1b39a283)
 
 ### Blockquote
 
@@ -61,7 +59,7 @@ You can type <kbd>></kbd> to insert blockquote by default
 <blockquote alt = 'red'>red</blockquote>
 ```
 
-![PixPin 2024 08 18 17 17 04](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-17-044fd017cfb6a0a347.png)
+![PixPin_2024-08-18_17-17-04](https://github.com/user-attachments/assets/0e528b38-cd50-49c7-993f-8feebbe56407)
 
 3. Github blockquote style
 
@@ -82,18 +80,17 @@ You can type <kbd>></kbd> to insert blockquote by default
 >
 ```
 
-![PixPin 2024 08 18 17 13 52](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-13-52abc29699a4dabdfa.png)
-
+![PixPin_2024-08-18_17-13-52](https://github.com/user-attachments/assets/b9aaaec6-15d5-41fc-ba6b-6aa8e17366b8)
 
 4. Blockquote style can change its color when it close to heading
 
-![PixPin 2024 08 18 17 40 31](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-40-31438bf74be7559e4d.gif)
+![PixPin_2024-08-18_17-40-31 ](https://github.com/user-attachments/assets/18316127-f1d2-422e-ad0b-ef2d894ccade)
 
 ### Title
 
 Redesign header style and its focus mode
 
-![PixPin 2024 08 18 17 23 46](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-23-465c4a1f5ea37d187c.gif)
+![PixPin_2024-08-18_17-23-46 ](https://github.com/user-attachments/assets/6e35f079-b677-4446-accd-d6fb84e4befe)
 
 ### Icon
 
@@ -106,9 +103,7 @@ Redesign header style and its focus mode
 <section alt="important">important</section>
 ```
 
-![PixPin 2024 08 18 17 15 57](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-15-57355700bf960eb69f.png)
-
-
+![PixPin_2024-08-18_17-15-57](https://github.com/user-attachments/assets/a2d387d6-094a-4618-9810-e52771cd7f5d)
 
 Provide local small icon in foldername called `icon`
 
@@ -118,7 +113,7 @@ Provide local small icon in foldername called `icon`
 
 ### Badge
 
-![PixPin 2024 08 18 17 19 26](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-19-26d719e5755cc35953.png)
+![PixPin_2024-08-18_17-19-26](https://github.com/user-attachments/assets/a4d8d9d9-ce88-4b7b-92de-756888f9d16b)
 
 ## Personalities
 
