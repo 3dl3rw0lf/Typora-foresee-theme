@@ -33,7 +33,7 @@ Selected textstyle is inspired by [typora-dyzj-theme](https://github.com/muggled
 
 1. Support custom cursor color
 
-![PixPin 2024 08 18 00 01 00](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_00-01-001bbf1d3c1f79dab1.gif)
+![PixPin_2024-08-18_00-01-001bbf1d3c1f79dab1 ](https://github.com/user-attachments/assets/0fd556f8-18fc-402e-970b-c79f67684d1b)
 
 2. Different code style based on the appearance of the system
 
@@ -47,7 +47,7 @@ Selected textstyle is inspired by [typora-dyzj-theme](https://github.com/muggled
 
 You can type <kbd>></kbd> to insert blockquote by default
 
-![截屏2024 07 24 21.25.23](https://img.picgo.net/2024/07/24/2024-07-24-21.25.2306902135529210e2.png)
+![2024-07-24-21 25 2306902135529210e2](https://github.com/user-attachments/assets/84fba09b-e634-404d-9075-3bb3ea33c52e)
 
 2. Blockquote style supports linear-gradient
 
@@ -63,7 +63,7 @@ You can type <kbd>></kbd> to insert blockquote by default
 
 3. Github blockquote style
 
-```md
+```markdown
 >[!note]
 >
 
@@ -109,7 +109,7 @@ Provide local small icon in foldername called `icon`
 
 > Copy and save in a fixed location on your computer, and directly reference the file to the image
 
- ![badge592266035bf8b236](https://img.picgo.net/2024/05/27/badge592266035bf8b236067398135730b8b5.png)
+![badge592266035bf8b236067398135730b8b5](https://github.com/user-attachments/assets/25dd928b-0727-49f0-9ec3-15e17005b951)
 
 ### Badge
 
@@ -117,7 +117,7 @@ Provide local small icon in foldername called `icon`
 
 ## Personalities
 
-Modify code in light(dark).scss so that you can make your own personal style
+Modify code in `foresee.scss` so that you can make your own personal style
 
 ```scss
 $display: (

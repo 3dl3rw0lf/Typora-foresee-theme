@@ -34,7 +34,7 @@
 
 1. 支持代码块自定义光标颜色
 
-![PixPin 2024 08 18 00 01 00](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_00-01-001bbf1d3c1f79dab1.gif)
+![PixPin 2024 08 18 00 01 001bbf1d3c1f79dab1](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_00-01-001bbf1d3c1f79dab1c31037217208932b.gif)
 
 
 
@@ -66,7 +66,7 @@
 
 3. Github 风格引用块
 
-```md
+```markdown
 >[!note]
 >
 
@@ -124,7 +124,7 @@
 
 ## 个性化[可选]
 
-修改light(dark).scss文件中代码以获得个性化体验
+修改`foresee.scss`文件中代码以获得个性化体验
 
 ```scss
 $display: (
