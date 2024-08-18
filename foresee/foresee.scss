@@ -1,7 +1,7 @@
 /* 
-version:0.0.3.6
+version:0.0.3.7
 author:passwordgloo
-mode:dark_theme
+mode:auto switch light and dark mode
 repo:https://github.com/passwordgloo/Typora-foresee-theme
 license:MIT
 */
@@ -9,8 +9,8 @@ license:MIT
 // Custom colors
 
 $display: (
-  light:#666,
-  dark:#FFF
+  light:#FFF,
+  dark:#666
 );
 
 $article: (
@@ -24,53 +24,68 @@ $sidebar: (
 );
 
 $textColor: (
-  light:#323232,
-  dark:#DEDEDE
+  light:#DEDEDE,
+  dark:#323232
 );
 
-$tomato:#FF6347;
+$tomato: #FF6347;
 
-$purple:#FF00FF;
+$purple: #FF00FF;
 
-$blue:#00BFFF;
+$blue: #00BFFF;
 
-$green:#00CD66;
+$green: #00CD66;
 
-$orange:#FF8C00;
+$orange: #FF8C00;
+
+$red: #fc6076;
 
 /* You can change theme color and focus color */
 
-$themeColor:$green;
+$themeColor: $green;
 
-$focusColor:$purple;
+$focusColor: $purple;
 
 :root {
-  --bg-color: map-get($article, dark);
-  --select-text-bg-color: #666;
-  --text-color:map-get($textColor,dark);
+  --bg-color: map-get($article, light);
+  --select-text-bg-color: map-get($display, dark);
+  --text-color: map-get($textColor, dark);
   --primary-color: $themeColor;
-  --rawblock-edit-panel-bd: map-get($sidebar, dark);
+  --rawblock-edit-panel-bd: map-get($sidebar, light);
   --item-hover-bg-color: $themeColor;
   --control-text-hover-color: $themeColor;
+
+  --md-char-color: rgba(72, 93, 108, 0.75);
+  --meta-content-color: var(--md-char-color);
+  --primary-btn-border-color: black;
+  --primary-btn-text-color: var(--text-color);
+  --active-file-bg-color: yellow;
+  --active-file-text-color: $themeColor;
+  --active-file-border-color: green;
+  --active-file-border-color: red;
+  --side-bar-bg-color: purple;
+  --item-hover-text-color: skyblue;
 }
 
 /* gradient colors */
 
-$black-gradient:#596164 0%, #868f96 100%;
+$black-gradient: #596164 0%, #868f96 100%;
 
 $blue-gradient: #005bea 0%, #00c6fb 100%;
 
-$orange-gradient: #fc6076 0%, #ff9a44 100%;
+$red-gradient: #fc6076 0%, #ff9a44 100%;
+
+$orange-gradient: #ff5858 0%, #f09819 100%;
 
 $purple-gradient: #c471f5 0%, #fa71cd 100%;
 
-$green-gradient:#0ba360 0%, #8ed451 100%;
+$green-gradient: #0ba360 0%, #8ed451 100%;
 
 // Custom fonts and style
 
-$border-radius:6px;
+$border-radius: 6px;
 
-$font-family:"Microsoft YaHei", "PingFang SC", "Arial", "sans-serif";
+$font-family: "Microsoft YaHei", "PingFang SC", "Arial", "sans-serif";
 
 /* you can change default page width
 #write {
@@ -78,11 +93,28 @@ $font-family:"Microsoft YaHei", "PingFang SC", "Arial", "sans-serif";
 } 
 */
 
+
+html {
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-family: $font-family;
+  color: var(--text-color);
+  line-height: 1.6;
+  background-color: var(--bg-color);
+  caret-color: var(--primary-color);
+}
+
 //scrollbar style
 ::-webkit-scrollbar-thumb {
   background: $themeColor;
-  &:active{
-      background: $focusColor;
+
+  &:active {
+    background: $focusColor;
   }
 }
 
@@ -96,28 +128,14 @@ $font-family:"Microsoft YaHei", "PingFang SC", "Arial", "sans-serif";
 
 .typora-node::-webkit-scrollbar-thumb:vertical {
   background: rgba(250, 250, 250, 0.3);
-  &:active{
-      background: rgba(250, 250, 250, 0.5);
+
+  &:active {
+    background: rgba(250, 250, 250, 0.5);
   }
 }
 
-html {
-  font-size: 16px;
-  -webkit-font-smoothing: antialiased;
-}
-
-body {
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  font-family: $font-family;
-  color: map-get($textColor, dark);
-  line-height: 1.6;
-  background-color: map-get($article, dark );
-  caret-color: $themeColor;
-}
-
 //header style
-@mixin header-common{
+@mixin header-common {
   margin-top: 1rem;
   margin-bottom: 1rem;
   line-height: 1.4;
@@ -145,31 +163,32 @@ h2 {
 
 #write>h2.md-focus {
   border-left-color: $focusColor;
-  transition:border-left-color .5s linear;
+  transition: border-left-color .5s linear;
 }
 
 h3 {
   font-size: 1.6rem;
   font-weight: 700;
   @include header-common();
-  &::after{
-      content:'';
-      display: block;
-      width:5rem;
-      height:.3rem;
-      background-color: $themeColor;
-      border-radius: .5rem;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: .3rem;
+    background-color: $themeColor;
+    border-radius: .5rem;
   }
 }
 
 #write>h3.md-focus::after {
-  content:'';
+  content: '';
   display: block;
-  width:5rem;
-  height:.3rem;
+  width: 5rem;
+  height: .3rem;
   background-color: $focusColor;
   border-radius: .5rem;
-  transition:background-color .5s linear;
+  transition: background-color .5s linear;
 }
 
 h4 {
@@ -182,7 +201,7 @@ h4 {
 
 #write>h4.md-focus {
   border-bottom-color: $focusColor;
-  transition:border-bottom-color .5s linear;
+  transition: border-bottom-color .5s linear;
 }
 
 h5 {
@@ -190,20 +209,28 @@ h5 {
   font-weight: 300;
   font-size: 1.2rem;
   @include header-common();
-  &:hover{
-      animation: bounce 2s infinite;
+
+  &:hover {
+    animation: bounce 2s infinite;
   }
 }
 
-@keyframes bounce{
-  0%,100%,20%,50%,80%{
-      transform: translateY(0);
+@keyframes bounce {
+
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    transform: translateY(0);
   }
-  40%{
-      transform: translateY(-1rem);
+
+  40% {
+    transform: translateY(-1rem);
   }
-  60%{
-      transform:translateY(-1rem)
+
+  60% {
+    transform: translateY(-1rem)
   }
 }
 
@@ -211,11 +238,11 @@ h5 {
   width: auto;
   height: auto;
   background-color: $focusColor;
-  color: white;
+  color: #ffffff;
 }
 
 sup.md-footnote {
-  background-color: map-get($sidebar,dark );
+  background-color: var(--rawblock-edit-panel-bd);
   color: $themeColor;
 }
 
@@ -230,13 +257,13 @@ p.md-focus>span.md-plain.md-expand {
 }
 
 a {
-  color: map-get($textColor, dark);
+  color: var(--text-color);
   text-decoration: none;
   border-bottom: 2px solid $themeColor;
 }
 
 /* badge */
-@mixin badge-common{
+@mixin badge-common {
   margin-left: .2em;
   padding: 0 .5em;
   color: white;
@@ -245,27 +272,32 @@ a {
 
 span[alt="black"] {
   @include badge-common();
-  background-image: linear-gradient(to right,$black-gradient);
+  background-image: linear-gradient(to right, $black-gradient);
 }
 
 span[alt="blue"] {
   @include badge-common();
-  background-image: linear-gradient(to right,$blue-gradient);
+  background-image: linear-gradient(to right, $blue-gradient);
 }
 
 span[alt="orange"] {
   @include badge-common();
-  background-image: linear-gradient(to right,$orange-gradient);
+  background-image: linear-gradient(to right, $orange-gradient);
 }
 
 span[alt="purple"] {
   @include badge-common();
-  background-image: linear-gradient(to right,$purple-gradient);
+  background-image: linear-gradient(to right, $purple-gradient);
 }
 
 span[alt="green"] {
   @include badge-common();
-  background-image: linear-gradient(to right,$green-gradient);
+  background-image: linear-gradient(to right, $green-gradient);
+}
+
+span[alt="red"] {
+  @include badge-common();
+  background-image: linear-gradient(to right, $red-gradient);
 }
 
 p,
@@ -318,7 +350,7 @@ li::marker {
   min-height: 1.5rem;
   margin: 1em 0;
   padding: 12px 0 8px 10px;
-  border-radius:$border-radius;
+  border-radius: $border-radius;
   border-left: 8px solid transparent;
   background-clip: padding-box, border-box;
   background-origin: padding-box, border-box;
@@ -341,182 +373,199 @@ li::marker {
   margin-right: .2rem;
 }
 
-@mixin blockquote-alt {
-  border: 8px solid transparent;
-  border-radius: 6px;
-  background-clip: padding-box, border-box;
-  background-origin: padding-box, border-box;
-  color: white;
-}
-
-@mixin blockquote-alt-img {
-  position: relative;
-  transform: translateX(-3px);
-  vertical-align: middle;
-  height: 1rem;
-  margin-right: .2rem;
-  overflow: hidden;
-}
-
 blockquote {
-  @include blockquote-common();    
+  @include blockquote-common();
   color: $themeColor;
-  background-image: linear-gradient(to right, map-get($sidebar,dark ),map-get($sidebar,dark )), linear-gradient(0deg,$themeColor 0%,$themeColor 100%);
-  color: map-get($article,light);
+  background-image: linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)), linear-gradient(0deg, $themeColor 0%, $themeColor 100%);
+  color: var(--text-color);
+
   img {
-      @include blockquote-img();
-      filter: drop-shadow($themeColor 0px -28px);
+    @include blockquote-img();
+    filter: drop-shadow($themeColor 0px -28px);
   }
 }
 
-h2+blockquote,blockquote[alt="green"]{
+h2+blockquote,
+blockquote[alt="green"] {
   @include blockquote-common();
-  background-image: linear-gradient(to right, map-get($sidebar,dark ),map-get($sidebar,dark )), linear-gradient(0deg,$green-gradient);
+  background-image: linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)), linear-gradient(0deg, $green-gradient);
   color: $green;
+
   //change svg color
   img {
-      @include blockquote-img();
-      filter: drop-shadow($green 0px -28px);
+    @include blockquote-img();
+    color: $green;
+    filter: drop-shadow($green 0px -28px);
   }
 }
 
-h3+blockquote,blockquote[alt="blue"]{
+h3+blockquote,
+blockquote[alt="blue"] {
   @include blockquote-common();
-  background-image: linear-gradient(to right, map-get($sidebar,dark ),map-get($sidebar,dark )), linear-gradient(0deg,$blue-gradient);
+  background-image: linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)), linear-gradient(0deg, $blue-gradient);
   color: $blue;
+
   img {
-      @include blockquote-img();
-      filter: drop-shadow($blue 0px -28px);
+    @include blockquote-img();
+    filter: drop-shadow($blue 0px -28px);
   }
 }
 
-h4+blockquote,blockquote[alt="orange"]{
+h4+blockquote,
+blockquote[alt="orange"] {
   @include blockquote-common();
-  background-image: linear-gradient(to right, map-get($sidebar,dark ),map-get($sidebar,dark )),  linear-gradient(0deg, $orange-gradient);
+  background-image: linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)), linear-gradient(0deg, $orange-gradient);
   color: $orange;
+
   img {
-      @include blockquote-img();
-      filter: drop-shadow($orange 0px -28px);
+    @include blockquote-img();
+    filter: drop-shadow($orange 0px -28px);
   }
 }
 
-h5+blockquote,blockquote[alt="purple"]{
+h5+blockquote,
+blockquote[alt="purple"] {
   @include blockquote-common();
-  background-image: linear-gradient(to right, map-get($sidebar,dark ),map-get($sidebar,dark )), linear-gradient(0deg,$purple-gradient);
-  color:$purple;
+  background-image: linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)), linear-gradient(0deg, $purple-gradient);
+  color: $purple;
+
   img {
-      @include blockquote-img();
-      filter: drop-shadow($purple 0px -28px);
+    @include blockquote-img();
+    filter: drop-shadow($purple 0px -28px);
   }
 }
 
-blockquote[alt="black-alt"]{
-  @include blockquote_alt(); 
-  background-image: linear-gradient(to right,$black-gradient), linear-gradient(90deg,$black-gradient); 
+blockquote[alt="red"] {
+  @include blockquote-common();
+  background-image: linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)), linear-gradient(0deg, $red-gradient);
+  color: $red;
+
   img {
-      @include blockquote_alt_img();
-      filter: drop-shadow($blue 0px -28px);
+    @include blockquote-img();
+    filter: drop-shadow($purple 0px -28px);
   }
 }
 
-blockquote[alt="orange-alt"]{
-  @include blockquote_alt(); 
-  background-image: linear-gradient(to right,$orange-gradient), linear-gradient(90deg, $orange-gradient); 
-  img {
-      @include blockquote_alt_img();
-  }
-}
-
-blockquote[alt="blue-alt"]{
-  @include blockquote_alt(); 
-  background-image: linear-gradient(to right,$blue-gradient), linear-gradient(90deg,$blue-gradient); 
-  img {
-      @include blockquote_alt_img();
-  }
-}
-
-blockquote[alt="purple-alt"]{
-  @include blockquote_alt(); 
-  background-image: linear-gradient(to right,$purple-gradient), linear-gradient(90deg, $purple-gradient); 
-  img {
-      @include blockquote_alt_img();
-  }
-}
-
-blockquote[alt="green-alt"]{
-  @include blockquote_alt(); 
-  background-image: linear-gradient(to right,$green-gradient), linear-gradient(90deg, $green-gradient); 
-  img {
-      @include blockquote_alt_img();
-  }
-}
-
-%bar{
+@mixin bar {
   padding: 10px 20px;
   border-radius: 6px;
   color: white;
   display: flex;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-left: none !important;
 }
 
-%bar_icon{
+%bar_icon {
   margin-left: -2rem;
-  margin-right:1rem;
-  text-align:center;
-  width:1.5rem;
-  height:1.5rem;
+  margin-right: 1rem;
+  text-align: center;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
-  border:3px solid white
+  border: 3px solid white
+}
+
+.md-alert-text-container::after {
+  color: white;
+}
+
+.md-alert-text-note,
+.md-alert-text-caution,
+.md-alert-text-tip,
+.md-alert-text-important,
+.md-alert-text-warning {
+  color: white;
+}
+
+.md-alert.md-alert-note {
+  @include bar();
+  background: linear-gradient(to right, $black-gradient);
+}
+
+.md-alert.md-alert-caution {
+  @include bar();
+  background: linear-gradient(to right, $red-gradient);
+}
+
+.md-alert.md-alert-tip {
+  @include bar();
+  background: linear-gradient(to right, $green-gradient);
+}
+
+.md-alert.md-alert-important {
+  @include bar();
+  background: linear-gradient(to right, $purple-gradient);
+}
+
+.md-alert.md-alert-warning {
+  @include bar();
+  background: linear-gradient(to right, $orange-gradient);
 }
 
 section[alt="warning"] {
-  @extend %bar;
-  background: linear-gradient(to right,$orange-gradient);
+  @include bar();
+  background: linear-gradient(to right, $orange-gradient);
+
   &::before {
     content: url("./foresee/icon/tanhao.svg");
     @extend %bar_icon;
-    background: linear-gradient(to right,$orange-gradient);
+    background: linear-gradient(to right, $orange-gradient);
   }
 }
 
 section[alt="info"] {
-  @extend %bar;
-  background: linear-gradient(to right,$blue-gradient);
+  @include bar();
+  background: linear-gradient(to right, $blue-gradient);
+
   &::before {
     content: url("./foresee/icon/info.svg");
     @extend %bar_icon;
-    background: linear-gradient(to right,$blue-gradient);
+    background: linear-gradient(to right, $blue-gradient);
   }
 }
 
 section[alt="tip"] {
-  @extend %bar;
-  background: linear-gradient(to right,$green-gradient);
+  @include bar();
+  background: linear-gradient(to right, $green-gradient);
+
   &::before {
     content: url("./foresee/icon/question.svg");
     @extend %bar_icon;
-    background: linear-gradient(to right,$green-gradient);
+    background: linear-gradient(to right, $green-gradient);
   }
 }
 
 section[alt="note"] {
-  @extend %bar;
-  background: linear-gradient(to right,$black-gradient);
+  @include bar();
+  background: linear-gradient(to right, $black-gradient);
+
   &::before {
     content: url("./foresee/icon/info.svg");
     @extend %bar_icon;
-    background: linear-gradient(to right,$black-gradient);
+    background: linear-gradient(to right, $black-gradient);
+  }
+}
+
+section[alt="caution"] {
+  @include bar();
+  background: linear-gradient(to right, $red-gradient);
+
+  &::before {
+    content: url("./foresee/icon/tanhao.svg");
+    @extend %bar_icon;
+    background: linear-gradient(to right, $red-gradient);
   }
 }
 
 section[alt="important"] {
-  @extend %bar;
-  background: linear-gradient(to right,$purple-gradient);
+  @include bar();
+  background: linear-gradient(to right, $purple-gradient);
+
   &::before {
     content: url("./foresee/icon/tanhao.svg");
     @extend %bar_icon;
-    background: linear-gradient(to right,$purple-gradient);
+    background: linear-gradient(to right, $purple-gradient);
   }
 }
 
@@ -527,13 +576,13 @@ table {
   word-break: initial;
 
   td {
-      font-weight: normal;
-      text-align: left;
+    font-weight: normal;
+    text-align: left;
 
-      &::selection {
-          background-color: map-get($article, dark );
-          color: map-get($display, dark );
-      }
+    &::selection {
+      background-color: map-get($article, light);
+      color: map-get($display, light);
+    }
   }
 }
 
@@ -556,7 +605,7 @@ table th {
 
 mark {
   background-color: $focusColor;
-  color: map-get($sidebar,dark );
+  color: var(--rawblock-edit-panel-bd);
 }
 
 /* -----------------------editor------------------------ */
@@ -575,15 +624,15 @@ mark {
 
 #top-titlebar,
 #top-titlebar * {
-  color: map-get($display, dark );
+  color: map-get($display, light);
 }
 
 /* ymal */
 #write pre.md-meta-block {
-  color: map-get($textColor, dark);
+  color: var(--text-color);
   padding: 1em;
   line-height: 1.6em;
-  background: map-get($sidebar,dark );
+  background: var(--rawblock-edit-panel-bd);
   border: 5%;
 }
 
@@ -593,7 +642,7 @@ code {
   margin-right: .4em;
   color: $themeColor;
   border-radius: 4px;
-  background-color: map-get($sidebar,dark );
+  background-color: var(--rawblock-edit-panel-bd);
 }
 
 kbd {
@@ -603,7 +652,7 @@ kbd {
   border-radius: 4px;
   border: none;
   box-shadow: 0 0 3px 0 $themeColor;
-  background-color: map-get($article, dark );
+  background-color: var(--bg-color);
 }
 
 em {
@@ -613,8 +662,8 @@ em {
 
 u {
   text-decoration-style: solid;
-  text-decoration-line:underline;
-  text-decoration-thickness:.1rem;
+  text-decoration-line: underline;
+  text-decoration-thickness: .1rem;
   text-decoration-color: $focusColor;
 }
 
@@ -622,15 +671,15 @@ pre.md-fences {
   padding: 10px 10px 10px 30px;
   margin-bottom: 20px;
   /* Just use for ubuntu*/
-  background-color:map-get($sidebar,dark );
+  background-color: var(--rawblock-edit-panel-bd);
 }
 
 #ty-tooltip {
-  background-color: map-get($article, dark );
-  color: map-get($textColor, dark);
+  background-color: map-get($article, light);
+  color: var(--text-color);
 }
 
-/* task list */
+/* --------------task list-------------- */
 .task-list {
   padding-left: 0;
 }
@@ -663,11 +712,11 @@ pre.md-fences {
   border-radius: 2px;
 }
 
-/* sidebar */
+/* --------------sidebar-------------- */
 #typora-sidebar {
   box-shadow: none;
   border-right: none;
-  background-color: map-get($sidebar,dark );
+  background-color: var(--rawblock-edit-panel-bd);
 }
 
 .sidebar-tabs {
@@ -682,7 +731,7 @@ pre.md-fences {
 .active-tab-files #info-panel-tab-file:hover,
 .active-tab-outline #info-panel-tab-outline,
 .active-tab-outline #info-panel-tab-outline:hover {
-  color: map-get($display, dark );
+  color: map-get($display, light);
 }
 
 /* outline */
@@ -696,25 +745,25 @@ pre.md-fences {
   color: white;
 }
 
-/* user config  background */
+/* --------------user config-------------- */
 .megamenu-content,
 .megamenu-opened header {
-  background: map-get($article, dark );
+  background: map-get($article, light);
 }
 
-/* bottom-word-count */
+/* ------------bottom word count------------ */
 .typora-sourceview-on #toggle-sourceview-btn,
 #footer-word-count:hover,
 .ty-show-word-count #footer-word-count {
-  background: map-get($sidebar,dark );
+  background: var(--rawblock-edit-panel-bd);
 }
 
 #toggle-sourceview-btn:hover {
-  color: map-get($textColor, dark);
-  background: map-get($sidebar,dark );
+  color: var(--text-color);
+  background: var(--rawblock-edit-panel-bd);
 }
 
-/* focus mode */
+/* --------------focus mode-------------- */
 .on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) * {
   color: #686868 !important;
 }
@@ -745,7 +794,7 @@ pre.md-fences {
 /* user config menu */
 .megamenu-content,
 .megamenu-opened header {
-  background: map-get($sidebar,dark );
+  background: var(--rawblock-edit-panel-bd);
 }
 
 .megamenu-menu-panel h2,
@@ -775,19 +824,19 @@ pre.md-fences {
 }
 
 .megamenu-menu {
-  background-color: map-get($article, dark );
+  background-color: map-get($article, light);
 }
 
 #megamenu-menu-list>li>a {
   border: none;
-  color: map-get($textColor, dark);
+  color: var(--text-color);
 }
 
 .megamenu-menu-header .megamenu-menu-header-title-menu,
 .megamenu-menu-header:focus .megamenu-menu-header-title-back,
 .megamenu-menu-header:hover .megamenu-menu-header-title-back {
   display: block;
-  color: map-get($textColor, dark);
+  color: var(--text-color);
 }
 
 .btn-default:hover,
@@ -829,25 +878,25 @@ pre.md-fences {
 }
 
 /*diagrams*/
-
 #write .md-focus .md-diagram-panel {
   border: 1px solid #ddd;
   margin-left: -1px;
   width: calc(100% + 2px);
 }
 
+/*diagrams*/
 #write .md-focus.md-fences-with-lineno .md-diagram-panel {
   margin-left: auto;
 }
 
 .md-diagram-panel-error {
-  color: $tomato;
+  color: tomato;
 }
 
 .sidebar-footer-item:hover,
 .footer-item:hover {
   background: inherit;
-  color: map-get($textColor, dark);
+  color: var(--text-color);
 }
 
 .ty-side-sort-btn.active,
@@ -856,18 +905,20 @@ pre.md-fences {
   color: white;
 }
 
+/* --------------sidebar-------------- */
+
 #sidebar-files-menu {
   border: solid 1px;
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.79);
-  background-color: map-get($sidebar,dark );
+  background-color: var(--rawblock-edit-panel-bd);
 }
 
 .ty-preferences input[type="search"] {
   border-color: $themeColor;
-  background: map-get($sidebar,dark );
+  background: var(--rawblock-edit-panel-bd);
   line-height: 22px;
   border-radius: 6px;
-  color: map-get($textColor, dark);
+  color: var(--text-color);
 }
 
 .ty-preferences input[type="search"]:focus {
@@ -896,7 +947,7 @@ pre.md-fences {
 }
 
 .file-library-node.active>.file-node-background {
-  background-color: map-get($article, dark );
+  background-color: var(--bg-color);
   border-color: $themeColor;
 }
 
@@ -914,12 +965,14 @@ footer.ty-footer {
   border-color: #656565;
 }
 
+/* --------------preferences-------------- */
+
 .ty-preferences .btn-default {
   background: transparent;
 }
 
 .ty-preferences .btn-default:hover {
-  background: map-get($sidebar,dark );
+  background: var(--rawblock-edit-panel-bd);
 }
 
 .ty-preferences select {
@@ -947,10 +1000,10 @@ footer.ty-footer {
   line-height: 26px;
 }
 
-// code_style(dark mode)
+// code_style(light mode)
 
 .cm-s-inner.CodeMirror {
-  background-color: map-get($sidebar, dark ) !important;
+  background-color: map-get($sidebar, light) !important;
   border: none
 }
 
@@ -986,7 +1039,7 @@ footer.ty-footer {
 
 .cm-s-inner span.cm-string,
 .cm-s-inner span.cm-string-2 {
-  color: #a8ff60
+  color: $purple;
 }
 
 .cm-s-inner span.cm-number {
@@ -1047,10 +1100,153 @@ footer.ty-footer {
 }
 
 .cm-s-inner .CodeMirror-activeline-background {
-  background: rgba(255, 255, 255, 0.1)
+  background: rgba(255, 255, 255, 0.3)
 }
 
 .cm-s-inner .CodeMirror-matchingbracket {
   text-decoration: underline;
   color: white !important
+}
+
+
+/* --------------print config-------------- */
+
+@media print {
+
+  table,
+  pre {
+    page-break-inside: avoid;
+  }
+
+  pre {
+    word-wrap: break-word;
+  }
+}
+
+/* --------------dark mode-------------- */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: map-get($article, dark);
+    --select-text-bg-color: #666;
+    --text-color: map-get($textColor, light);
+    --primary-color: $themeColor;
+    --rawblock-edit-panel-bd: map-get($sidebar, dark);
+    --item-hover-bg-color: $themeColor;
+    --control-text-hover-color: $themeColor;
+  }
+
+  #top-titlebar,
+  #top-titlebar * {
+    color: map-get($display, dark);
+  }
+
+  // code_style(dark mode)
+
+  .cm-s-inner.CodeMirror {
+    background-color: map-get($sidebar, dark) !important;
+    border: none
+  }
+
+  .cm-s-inner .CodeMirror-gutters {
+    color: #404b53;
+    border: none
+  }
+
+  .CodeMirror div.CodeMirror-cursor {
+    border-left: solid 2px $themeColor
+  }
+
+  .cm-s-inner .CodeMirror-line::selection,
+  .cm-s-inner .CodeMirror-line::-moz-selection,
+  .cm-s-inner .CodeMirror-line>span::selection,
+  .cm-s-inner .CodeMirror-line>span::-moz-selection,
+  .cm-s-inner .CodeMirror-line>span>span::selection,
+  .cm-s-inner .CodeMirror-line>span>span::-moz-selection {
+    background: rgba(255, 255, 255, 0.1)
+  }
+
+  .cm-s-inner.CodeMirror-focused div.CodeMirror-selected {
+    background: rgba(255, 255, 255, 0.1)
+  }
+
+  .cm-s-inner .CodeMirror-linenumber {
+    color: #6D8A88
+  }
+
+  .cm-s-inner span.cm-comment {
+    color: #7c7c7c
+  }
+
+  .cm-s-inner span.cm-string,
+  .cm-s-inner span.cm-string-2 {
+    color: #a8ff60
+  }
+
+  .cm-s-inner span.cm-number {
+    color: #cd3f45
+  }
+
+  .cm-s-inner span.cm-variable {
+    color: #55b5db
+  }
+
+  .cm-s-inner span.cm-variable-2 {
+    color: #a074c4
+  }
+
+  .cm-s-inner span.cm-def {
+    color: #55b5db
+  }
+
+  .cm-s-inner span.cm-keyword {
+    color: #ff79c6
+  }
+
+  .cm-s-inner span.cm-operator {
+    color: #9fca56
+  }
+
+  .cm-s-inner span.cm-atom {
+    color: #cd3f45
+  }
+
+  .cm-s-inner span.cm-meta {
+    color: #55b5db
+  }
+
+  .cm-s-inner span.cm-tag {
+    color: #55b5db
+  }
+
+  .cm-s-inner span.cm-attribute {
+    color: #9fca56
+  }
+
+  .cm-s-inner span.cm-qualifier {
+    color: #9fca56
+  }
+
+  .cm-s-inner span.cm-property {
+    color: #a074c4
+  }
+
+  .cm-s-inner span.cm-variable-3,
+  .cm-s-inner span.cm-type {
+    color: #9fca56
+  }
+
+  .cm-s-inner span.cm-builtin {
+    color: #9fca56
+  }
+
+  .cm-s-inner .CodeMirror-activeline-background {
+    background: rgba(255, 255, 255, 0.1)
+  }
+
+  .cm-s-inner .CodeMirror-matchingbracket {
+    text-decoration: underline;
+    color: white !important
+  }
+
 }

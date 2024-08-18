@@ -20,6 +20,7 @@
 
 ## 特点
 
+- 根据系统外观设置自动切换主题模式
 - 用户自定义颜色配置
 - 模块化设计思路
 
@@ -29,11 +30,19 @@
 
 ### 代码样式
 
-支持代码块自定义光标颜色
+> 请在偏好设置>Markdown>打开`显示行号`，以获得更好体验
+
+1. 支持代码块自定义光标颜色
 
 ![PixPin 2024 08 18 00 01 00](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_00-01-001bbf1d3c1f79dab1.gif)
 
-请在偏好设置>Markdown>打开`显示行号`，以获得更好体验
+
+
+2. 根据系统外观使用不同代码样式
+
+![PixPin 2024 08 18 17 20 32](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-20-320212612d5f2cd57c.png)
+
+![PixPin 2024 08 18 17 20 09](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-20-09e3d823ee3bc3f30f.png)
 
 ### 引用块
 
@@ -46,41 +55,68 @@
 2. 引用块样式支持渐变色
 
 ```html
-<blockquote alt="blue">Content</blockquote>
-<blockquote alt="green">Content</blockquote>
-<blockquote alt="orange">Content</blockquote>
-<blockquote alt="purple">Content</blockquote>
+<blockquote alt = 'green'>green</blockquote>
+<blockquote alt = 'blue'>blue</blockquote>
+<blockquote alt = 'orange'>orange</blockquote>
+<blockquote alt = 'purple'>purple</blockquote>
+<blockquote alt = 'red'>red</blockquote>
 ```
 
-![PixPin 2024 08 18 00 10 17](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_00-10-17b9a005d0e96c2144.png)
+![PixPin 2024 08 18 17 17 04](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-17-044fd017cfb6a0a347.png)
 
-3. 宽屏渐变引用块样式
+3. Github 风格引用块
 
-```html
-<blockquote alt = 'black-alt'>black</blockquote>
-<blockquote alt = 'green-alt'>green</blockquote>
-<blockquote alt = 'blue-alt'>blue</blockquote>
-<blockquote alt = 'orange-alt'>orange</blockquote>
-<blockquote alt = 'purple-alt'>purple</blockquote>
+```md
+>[!note]
+>
+
+>[!tip]
+>
+
+>[!warning]
+>
+
+>[!caution]
+>
+
+>[!important]
+>
 ```
 
-![PixPin 2024 08 18 00 13 36](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_00-13-363377792b4ee10a57.png)
+![PixPin 2024 08 18 17 13 52](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-13-52abc29699a4dabdfa.png)
 
 4. 引用块样式随标题不同而不同
 
-![blockquote 2](https://img.picgo.net/2024/05/03/blockquote_2a26110a46ff5b2d8.gif)
+![PixPin 2024 08 18 17 40 31](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-40-31438bf74be7559e4d.gif)
 
 ### 标题
 
 重新调整标题样式，添加专注模式下样式
 
+![PixPin 2024 08 18 17 23 46](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-23-465c4a1f5ea37d187c.gif)
+
 ### 图标
+
+```html
+<section alt="note">note text</section>
+<section alt="info">info text</section>
+<section alt="tip">tip text</section>
+<section alt="warning">warning text</section>
+<section alt="caution">caution</section>
+<section alt="important">important</section>
+```
+
+![PixPin 2024 08 18 17 15 57](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-15-57355700bf960eb69f.png)
 
 - 在文件夹`icon`友情提供小图标
 
 > 复制并保存到电脑本地固定位置，图片直接引用文件即可
 
 ![badge592266035bf8b236](https://img.picgo.net/2024/05/27/badge592266035bf8b236067398135730b8b5.png)
+
+### 徽章
+
+![PixPin 2024 08 18 17 19 26](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-19-26d719e5755cc35953.png)
 
 ## 教程
 
@@ -92,8 +128,8 @@
 
 ```scss
 $display: (
-  light:#666,
-  dark:#FFF
+  light:#FFF,
+  dark:#666
 );
 
 $article: (
@@ -107,59 +143,75 @@ $sidebar: (
 );
 
 $textColor: (
-  light:#323232,
-  dark:#DEDEDE
+  light:#DEDEDE,
+  dark:#323232
 );
 
-$tomato:#FF6347;
+$tomato: #FF6347;
 
-$purple:#FF00FF;
+$purple: #FF00FF;
 
-$blue:#00BFFF;
+$blue: #00BFFF;
 
-$green:#00CD66;
+$green: #00CD66;
 
-$orange:#FF8C00;
+$orange: #FF8C00;
+
+$red: #fc6076;
 
 /* You can change theme color and focus color */
 
-$themeColor:$green;
+$themeColor: $green;
 
-$focusColor:$purple;
+$focusColor: $purple;
 
 :root {
-  --bg-color: map-get($article, dark);
-  --select-text-bg-color: #666;
-  --text-color:map-get($textColor,dark);
+  --bg-color: map-get($article, light);
+  --select-text-bg-color: map-get($display, dark);
+  --text-color: map-get($textColor, dark);
   --primary-color: $themeColor;
-  --rawblock-edit-panel-bd: map-get($sidebar, dark);
+  --rawblock-edit-panel-bd: map-get($sidebar, light);
   --item-hover-bg-color: $themeColor;
   --control-text-hover-color: $themeColor;
+
+  --md-char-color: rgba(72, 93, 108, 0.75);
+  --meta-content-color: var(--md-char-color);
+  --primary-btn-border-color: black;
+  --primary-btn-text-color: var(--text-color);
+  --active-file-bg-color: yellow;
+  --active-file-text-color: $themeColor;
+  --active-file-border-color: green;
+  --active-file-border-color: red;
+  --side-bar-bg-color: purple;
+  --item-hover-text-color: skyblue;
 }
 
 /* gradient colors */
 
-$black-gradient:#596164 0%, #868f96 100%;
+$black-gradient: #596164 0%, #868f96 100%;
 
 $blue-gradient: #005bea 0%, #00c6fb 100%;
 
-$orange-gradient: #fc6076 0%, #ff9a44 100%;
+$red-gradient: #fc6076 0%, #ff9a44 100%;
+
+$orange-gradient: #ff5858 0%, #f09819 100%;
 
 $purple-gradient: #c471f5 0%, #fa71cd 100%;
 
-$green-gradient:#0ba360 0%, #8ed451 100%;
+$green-gradient: #0ba360 0%, #8ed451 100%;
 
 // Custom fonts and style
 
-$border-radius:6px;
+$border-radius: 6px;
 
-$font-family:"Microsoft YaHei", "PingFang SC", "Arial", "sans-serif";
+$font-family: "Microsoft YaHei", "PingFang SC", "Arial", "sans-serif";
 
 /* you can change default page width
 #write {
   max-width: 914px;
 } 
 */
+
 ```
 
 ## 预览
