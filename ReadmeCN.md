@@ -23,7 +23,6 @@
 - 根据系统外观设置自动切换主题模式
 - 用户自定义颜色配置
 - 模块化设计思路
-
 - 使用 `scss` 格式替代原先的 `css`
 
 ## 突出亮点
@@ -35,7 +34,6 @@
 1. 支持代码块自定义光标颜色
 
 ![PixPin 2024 08 18 00 01 001bbf1d3c1f79dab1](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_00-01-001bbf1d3c1f79dab1c31037217208932b.gif)
-
 
 
 2. 根据系统外观使用不同代码样式
@@ -159,11 +157,29 @@ $orange: #FF8C00;
 
 $red: #fc6076;
 
-/* You can change theme color and focus color */
+/* Gradient colors */
 
-$themeColor: $green;
+$black-gradient: #596164 0%, #868f96 100%;
 
-$focusColor: $purple;
+$blue-gradient: #005bea 0%, #00c6fb 100%;
+
+$red-gradient: #fc6076 0%, #ff9a44 100%;
+
+$orange-gradient: #ff5858 0%, #f09819 100%;
+
+$purple-gradient: #c471f5 0%, #fa71cd 100%;
+
+$green-gradient: #0ba360 0%, #8ed451 100%;
+
+/*  You can change theme color and theme gradient color */
+
+$themeColor: $orange;
+
+$focusColor: $green;
+
+$themeGradient:$orange-gradient;
+
+$focusGradient:$green-gradient;
 
 :root {
   --bg-color: map-get($article, light);
@@ -186,20 +202,6 @@ $focusColor: $purple;
   --item-hover-text-color: skyblue;
 }
 
-/* gradient colors */
-
-$black-gradient: #596164 0%, #868f96 100%;
-
-$blue-gradient: #005bea 0%, #00c6fb 100%;
-
-$red-gradient: #fc6076 0%, #ff9a44 100%;
-
-$orange-gradient: #ff5858 0%, #f09819 100%;
-
-$purple-gradient: #c471f5 0%, #fa71cd 100%;
-
-$green-gradient: #0ba360 0%, #8ed451 100%;
-
 // Custom fonts and style
 
 $border-radius: 6px;
@@ -207,6 +209,7 @@ $border-radius: 6px;
 $font-family: "Microsoft YaHei", "PingFang SC", "Arial", "sans-serif";
 
 /* you can change default page width
+
 #write {
   max-width: 914px;
 } 
@@ -218,7 +221,7 @@ $font-family: "Microsoft YaHei", "PingFang SC", "Arial", "sans-serif";
 
 ### 浅色模式
 
-![](https://github.com/passwordgloo/Typora-foresee-theme/assets/90091016/b5caf62b-6b51-4556-8b72-c66bc9f7378d)
+![light en](https://img.picgo.net/2024/05/03/light_ena9da10e94d5a2ae9.png)
 
 ### 深色模式
 

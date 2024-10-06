@@ -33,13 +33,13 @@ Selected textstyle is inspired by [typora-dyzj-theme](https://github.com/muggled
 
 1. Support custom cursor color
 
-![PixPin_2024-08-18_00-01-001bbf1d3c1f79dab1 ](https://github.com/user-attachments/assets/0fd556f8-18fc-402e-970b-c79f67684d1b)
+![PixPin 2024 08 18 00 01 001bbf1d3c1f79dab1](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_00-01-001bbf1d3c1f79dab1c31037217208932b.gif)
 
 2. Different code style based on the appearance of the system
 
-![PixPin_2024-08-18_17-20-32](https://github.com/user-attachments/assets/65e3561a-565b-4641-b75c-71c9a50c40a2)
+![PixPin 2024 08 18 17 20 32](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-20-320212612d5f2cd57c.png)
 
-![PixPin_2024-08-18_17-20-09](https://github.com/user-attachments/assets/859bfb5d-6a27-456f-ac78-9a5d1b39a283)
+![PixPin 2024 08 18 17 20 09](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-20-09e3d823ee3bc3f30f.png)
 
 ### Blockquote
 
@@ -47,7 +47,7 @@ Selected textstyle is inspired by [typora-dyzj-theme](https://github.com/muggled
 
 You can type <kbd>></kbd> to insert blockquote by default
 
-![2024-07-24-21 25 2306902135529210e2](https://github.com/user-attachments/assets/84fba09b-e634-404d-9075-3bb3ea33c52e)
+![截屏2024 07 24 21.25.23](https://img.picgo.net/2024/07/24/2024-07-24-21.25.2306902135529210e2.png)
 
 2. Blockquote style supports linear-gradient
 
@@ -59,7 +59,7 @@ You can type <kbd>></kbd> to insert blockquote by default
 <blockquote alt = 'red'>red</blockquote>
 ```
 
-![PixPin_2024-08-18_17-17-04](https://github.com/user-attachments/assets/0e528b38-cd50-49c7-993f-8feebbe56407)
+![PixPin 2024 08 18 17 17 04](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-17-044fd017cfb6a0a347.png)
 
 3. Github blockquote style
 
@@ -80,17 +80,17 @@ You can type <kbd>></kbd> to insert blockquote by default
 >
 ```
 
-![PixPin_2024-08-18_17-13-52](https://github.com/user-attachments/assets/b9aaaec6-15d5-41fc-ba6b-6aa8e17366b8)
+![PixPin 2024 08 18 17 13 52](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-13-52abc29699a4dabdfa.png)
 
 4. Blockquote style can change its color when it close to heading
 
-![PixPin_2024-08-18_17-40-31 ](https://github.com/user-attachments/assets/18316127-f1d2-422e-ad0b-ef2d894ccade)
+![PixPin 2024 08 18 17 40 31](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-40-31438bf74be7559e4d.gif)
 
 ### Title
 
 Redesign header style and its focus mode
 
-![PixPin_2024-08-18_17-23-46 ](https://github.com/user-attachments/assets/6e35f079-b677-4446-accd-d6fb84e4befe)
+![PixPin 2024 08 18 17 23 46](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-23-465c4a1f5ea37d187c.gif)
 
 ### Icon
 
@@ -103,17 +103,17 @@ Redesign header style and its focus mode
 <section alt="important">important</section>
 ```
 
-![PixPin_2024-08-18_17-15-57](https://github.com/user-attachments/assets/a2d387d6-094a-4618-9810-e52771cd7f5d)
+![PixPin 2024 08 18 17 15 57](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-15-57355700bf960eb69f.png)
 
 Provide local small icon in foldername called `icon`
 
 > Copy and save in a fixed location on your computer, and directly reference the file to the image
 
-![badge592266035bf8b236067398135730b8b5](https://github.com/user-attachments/assets/25dd928b-0727-49f0-9ec3-15e17005b951)
+![badge592266035bf8b236](https://img.picgo.net/2024/05/27/badge592266035bf8b236067398135730b8b5.png)
 
 ### Badge
 
-![PixPin_2024-08-18_17-19-26](https://github.com/user-attachments/assets/a4d8d9d9-ce88-4b7b-92de-756888f9d16b)
+![PixPin 2024 08 18 17 19 26](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-19-26d719e5755cc35953.png)
 
 ## Personalities
 
@@ -152,11 +152,29 @@ $orange: #FF8C00;
 
 $red: #fc6076;
 
-/* You can change theme color and focus color */
+/* Gradient colors */
 
-$themeColor: $green;
+$black-gradient: #596164 0%, #868f96 100%;
 
-$focusColor: $purple;
+$blue-gradient: #005bea 0%, #00c6fb 100%;
+
+$red-gradient: #fc6076 0%, #ff9a44 100%;
+
+$orange-gradient: #ff5858 0%, #f09819 100%;
+
+$purple-gradient: #c471f5 0%, #fa71cd 100%;
+
+$green-gradient: #0ba360 0%, #8ed451 100%;
+
+/*  You can change theme color and theme gradient color */
+
+$themeColor: $orange;
+
+$focusColor: $green;
+
+$themeGradient:$orange-gradient;
+
+$focusGradient:$green-gradient;
 
 :root {
   --bg-color: map-get($article, light);
@@ -178,20 +196,6 @@ $focusColor: $purple;
   --side-bar-bg-color: purple;
   --item-hover-text-color: skyblue;
 }
-
-/* gradient colors */
-
-$black-gradient: #596164 0%, #868f96 100%;
-
-$blue-gradient: #005bea 0%, #00c6fb 100%;
-
-$red-gradient: #fc6076 0%, #ff9a44 100%;
-
-$orange-gradient: #ff5858 0%, #f09819 100%;
-
-$purple-gradient: #c471f5 0%, #fa71cd 100%;
-
-$green-gradient: #0ba360 0%, #8ed451 100%;
 
 // Custom fonts and style
 

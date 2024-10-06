@@ -1,5 +1,5 @@
 /* 
-version:0.0.3.7
+version:0.0.4.0
 author:passwordgloo
 mode:auto switch light and dark mode
 repo:https://github.com/passwordgloo/Typora-foresee-theme
@@ -7,6 +7,8 @@ license:MIT
 */
 
 // Custom colors
+
+/*  Interface color */
 
 $display: (
   light:#FFF,
@@ -40,34 +42,7 @@ $orange: #FF8C00;
 
 $red: #fc6076;
 
-/* You can change theme color and focus color */
-
-$themeColor: $green;
-
-$focusColor: $purple;
-
-:root {
-  --bg-color: map-get($article, light);
-  --select-text-bg-color: map-get($display, dark);
-  --text-color: map-get($textColor, dark);
-  --primary-color: $themeColor;
-  --rawblock-edit-panel-bd: map-get($sidebar, light);
-  --item-hover-bg-color: $themeColor;
-  --control-text-hover-color: $themeColor;
-
-  --md-char-color: rgba(72, 93, 108, 0.75);
-  --meta-content-color: var(--md-char-color);
-  --primary-btn-border-color: black;
-  --primary-btn-text-color: var(--text-color);
-  --active-file-bg-color: yellow;
-  --active-file-text-color: $themeColor;
-  --active-file-border-color: green;
-  --active-file-border-color: red;
-  --side-bar-bg-color: purple;
-  --item-hover-text-color: skyblue;
-}
-
-/* gradient colors */
+/* Gradient colors */
 
 $black-gradient: #596164 0%, #868f96 100%;
 
@@ -81,18 +56,48 @@ $purple-gradient: #c471f5 0%, #fa71cd 100%;
 
 $green-gradient: #0ba360 0%, #8ed451 100%;
 
+/*  You can change theme color and theme gradient color */
+
+$themeColor: $orange;
+
+$focusColor: $green;
+
+$themeGradient:$orange-gradient;
+
+$focusGradient:$green-gradient;
+
+:root {
+  --bg-color: map-get($article, light);
+  --select-text-bg-color: map-get($display, dark);
+  --text-color: map-get($textColor, dark);
+  --primary-color: $themeColor;
+  --rawblock-edit-panel-bd: map-get($sidebar, light);
+  --item-hover-bg-color: $themeColor;
+  --control-text-hover-color: $themeColor;
+  --md-char-color: rgba(72, 93, 108, 0.75);
+  --meta-content-color: var(--md-char-color);
+  --primary-btn-border-color: black;
+  --primary-btn-text-color: var(--text-color);
+  --active-file-bg-color: yellow;
+  --active-file-text-color: $themeColor;
+  --active-file-border-color: green;
+  --active-file-border-color: red;
+  --side-bar-bg-color: purple;
+  --item-hover-text-color: skyblue;
+}
+
 // Custom fonts and style
 
 $border-radius: 6px;
 
 $font-family: "Microsoft YaHei", "PingFang SC", "Arial", "sans-serif";
 
-/* you can change default page width
-#write {
-  max-width: 914px;
-} 
-*/
+// You can change default page width
 
+/* #write {
+  max-width: 914px;
+}  
+*/
 
 html {
   font-size: 1rem;
@@ -109,7 +114,8 @@ body {
   caret-color: var(--primary-color);
 }
 
-//scrollbar style
+// Scrollbar style
+
 ::-webkit-scrollbar-thumb {
   background: $themeColor;
 
@@ -134,7 +140,8 @@ body {
   }
 }
 
-//header style
+// Header style
+
 @mixin header-common {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -163,7 +170,7 @@ h2 {
 
 #write>h2.md-focus {
   border-left-color: $focusColor;
-  transition: border-left-color .5s linear;
+  transition: border-left-color .8s linear;
 }
 
 h3 {
@@ -176,8 +183,8 @@ h3 {
     display: block;
     width: 5rem;
     height: .3rem;
-    background-color: $themeColor;
-    border-radius: .5rem;
+    background-image: linear-gradient(to right,$themeGradient);
+    border-radius: $border-radius;
   }
 }
 
@@ -186,9 +193,9 @@ h3 {
   display: block;
   width: 5rem;
   height: .3rem;
-  background-color: $focusColor;
-  border-radius: .5rem;
-  transition: background-color .5s linear;
+  background-image: linear-gradient(to right,$focusGradient);
+  border-radius: $border-radius;
+  transition: background-image .8s linear;
 }
 
 h4 {
@@ -262,7 +269,8 @@ a {
   border-bottom: 2px solid $themeColor;
 }
 
-/* badge */
+// Badge
+
 @mixin badge-common {
   margin-left: .2em;
   padding: 0 .5em;
@@ -342,7 +350,7 @@ li::marker {
   color: $themeColor;
 }
 
-// blockquote style , default single color
+// Blockquote style , default single color
 
 @mixin blockquote-common {
   text-indent: 0em;
@@ -357,7 +365,7 @@ li::marker {
   overflow: hidden;
 }
 
-// windows blockquote icon
+// Windows blockquote icon
 /* @mixin blockquote-img {
   position: relative;
   transform: translateX(-80px);
@@ -365,7 +373,7 @@ li::marker {
   margin-right: .2rem;
 } */
 
-// mac blockquote icon
+// Mac blockquote icon
 @mixin blockquote-img {
   position: relative;
   transform: translateY(26.8px);
@@ -608,7 +616,7 @@ mark {
   color: var(--rawblock-edit-panel-bd);
 }
 
-/* -----------------------editor------------------------ */
+// Editor
 ::-moz-selection {
   background: $themeColor;
   color: #fff;
@@ -627,32 +635,24 @@ mark {
   color: map-get($display, light);
 }
 
-/* ymal */
+// Ymal
+
 #write pre.md-meta-block {
   color: var(--text-color);
   padding: 1em;
   line-height: 1.6em;
   background: var(--rawblock-edit-panel-bd);
-  border: 5%;
+  border-radius: $border-radius;
 }
 
-/* code and code block */
-code {
-  padding: .3rem;
-  margin-right: .4em;
-  color: $themeColor;
-  border-radius: 4px;
-  background-color: var(--rawblock-edit-panel-bd);
-}
+// Code and code block
 
-kbd {
+code,kbd{
   padding: .3rem;
   margin-right: .4em;
-  color: $themeColor;
-  border-radius: 4px;
-  border: none;
-  box-shadow: 0 0 3px 0 $themeColor;
-  background-color: var(--bg-color);
+  color: map-get($textColor, light);
+  border-radius: $border-radius;
+  background-color: map-get($textColor, dark);
 }
 
 em {
@@ -679,7 +679,8 @@ pre.md-fences {
   color: var(--text-color);
 }
 
-/* --------------task list-------------- */
+// Todo list
+
 .task-list {
   padding-left: 0;
 }
@@ -690,29 +691,27 @@ pre.md-fences {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+  ::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    padding-left: 0px;
+    color: #fff;
+    text-align: center;
+    border: 1px solid $themeColor;
+  }
+  :checked::after {
+    content: '✓';
+    font-size: 12px;
+    background-color: $themeColor;
+    border-radius: 2px;
+  }
 }
 
-.md-task-list-item>input::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  display: inline-block;
-  width: 1rem;
-  height: 1rem;
-  padding-left: 0px;
-  color: #fff;
-  text-align: center;
-  border: 1px solid $themeColor;
-}
-
-.md-task-list-item>input:checked::after {
-  content: '✓';
-  font-size: 12px;
-  background-color: $themeColor;
-  border-radius: 2px;
-}
-
-/* --------------sidebar-------------- */
+// Sidebar
 #typora-sidebar {
   box-shadow: none;
   border-right: none;
@@ -734,7 +733,8 @@ pre.md-fences {
   color: map-get($display, light);
 }
 
-/* outline */
+// Outline
+
 .outline-title-wrapper .btn {
   color: inherit;
 }
@@ -745,13 +745,8 @@ pre.md-fences {
   color: white;
 }
 
-/* --------------user config-------------- */
-.megamenu-content,
-.megamenu-opened header {
-  background: map-get($article, light);
-}
+// Bottom word count
 
-/* ------------bottom word count------------ */
 .typora-sourceview-on #toggle-sourceview-btn,
 #footer-word-count:hover,
 .ty-show-word-count #footer-word-count {
@@ -763,7 +758,7 @@ pre.md-fences {
   background: var(--rawblock-edit-panel-bd);
 }
 
-/* --------------focus mode-------------- */
+// Focus mode
 .on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) * {
   color: #686868 !important;
 }
@@ -791,10 +786,11 @@ pre.md-fences {
   color: #686868 !important;
 }
 
-/* user config menu */
+// User config
+
 .megamenu-content,
 .megamenu-opened header {
-  background: var(--rawblock-edit-panel-bd);
+  background: map-get($article, light);
 }
 
 .megamenu-menu-panel h2,
@@ -877,14 +873,14 @@ pre.md-fences {
   background-color: inherit;
 }
 
-/*diagrams*/
+// Diagrams
+
 #write .md-focus .md-diagram-panel {
   border: 1px solid #ddd;
   margin-left: -1px;
   width: calc(100% + 2px);
 }
 
-/*diagrams*/
 #write .md-focus.md-fences-with-lineno .md-diagram-panel {
   margin-left: auto;
 }
@@ -904,8 +900,6 @@ pre.md-fences {
 .selected-folder-menu-item a:after {
   color: white;
 }
-
-/* --------------sidebar-------------- */
 
 #sidebar-files-menu {
   border: solid 1px;
@@ -965,7 +959,7 @@ footer.ty-footer {
   border-color: #656565;
 }
 
-/* --------------preferences-------------- */
+// Preferences
 
 .ty-preferences .btn-default {
   background: transparent;
@@ -1000,7 +994,7 @@ footer.ty-footer {
   line-height: 26px;
 }
 
-// code_style(light mode)
+// Code_style(light mode)
 
 .cm-s-inner.CodeMirror {
   background-color: map-get($sidebar, light) !important;
@@ -1108,8 +1102,7 @@ footer.ty-footer {
   color: white !important
 }
 
-
-/* --------------print config-------------- */
+// Print config
 
 @media print {
 
@@ -1123,7 +1116,7 @@ footer.ty-footer {
   }
 }
 
-/* --------------dark mode-------------- */
+// Dark mode
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -1141,7 +1134,15 @@ footer.ty-footer {
     color: map-get($display, dark);
   }
 
-  // code_style(dark mode)
+  code,kbd{
+    padding: .3rem;
+    margin-right: .4em;
+    color: map-get($textColor, dark);
+    border-radius: $border-radius;
+    background-color: map-get($article, light);
+  }
+
+  // Code_style(dark mode)
 
   .cm-s-inner.CodeMirror {
     background-color: map-get($sidebar, dark) !important;
