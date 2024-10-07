@@ -29,6 +29,19 @@ Selected textstyle is inspired by [typora-dyzj-theme](https://github.com/muggled
 
 ### Code Style
 
+#### Inline code
+
+>Use Mac keyboard style for line code and `kbd` element
+
+inline code like this
+
+![PixPin 2024 10 07 10 52 46](https://img.picgo.net/2024/10/07/PixPin_2024-10-07_10-52-467f14386bb44c147e.webp)
+
+`kbd` element like this
+
+![PixPin 2024 10 07 11 06 58](https://img.picgo.net/2024/10/07/PixPin_2024-10-07_11-06-58b1385e0e76a87061.webp)
+
+
 > Please go to Preferences>Markdown> to turn on `displaying line numbers` for a better experience
 
 1. Support custom cursor color
