@@ -31,7 +31,7 @@ Selected textstyle is inspired by [typora-dyzj-theme](https://github.com/muggled
 
 #### Inline code
 
->[!tip]
+>[!note]
 >Use Mac keyboard style for line code and `kbd` element
 
 inline code like this
@@ -42,7 +42,7 @@ inline code like this
 
 ![PixPin 2024 10 07 11 06 58](https://img.picgo.net/2024/10/07/PixPin_2024-10-07_11-06-58b1385e0e76a87061.webp)
 
->[!info]
+>[!important]
 > Please go to Preferences>Markdown> to turn on `displaying line numbers` for a better experience
 
 1. Support custom cursor color
@@ -102,7 +102,8 @@ You can type <kbd>></kbd> to insert blockquote by default
 
 ### Title
 
-Redesign header style and its focus mode
+>[!note]
+>Redesign header style and its focus mode
 
 ![PixPin 2024 08 18 17 23 46](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-23-465c4a1f5ea37d187c.gif)
 
@@ -119,8 +120,10 @@ Redesign header style and its focus mode
 
 ![PixPin 2024 08 18 17 15 57](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-15-57355700bf960eb69f.png)
 
->[!important]
+>[!tip]
 > Provide local small icon in which foldername called `icon`
+
+>[!important]
 > Copy and save in a fixed location on your computer, and directly reference the file to the image
 
 ![badge592266035bf8b236](https://img.picgo.net/2024/05/27/badge592266035bf8b236067398135730b8b5.png)
@@ -131,7 +134,8 @@ Redesign header style and its focus mode
 
 ## Personalities
 
-Modify code in `foresee.scss` so that you can make your own personal style
+>[!warning]
+>Modify code in `foresee.scss` so that you can make your own personal style
 
 ```scss
 $display: (
