@@ -29,6 +29,7 @@
 
 ### 代码样式
 
+>[!tip]
 >使用Mac风格键盘样式修饰行内块和kbd元素
 
 行内块样式如下
@@ -39,6 +40,7 @@ kbd元素样式如下
 
 ![PixPin 2024 10 07 11 06 58](https://img.picgo.net/2024/10/07/PixPin_2024-10-07_11-06-58b1385e0e76a87061.webp)
 
+>[!info]
 > 请在偏好设置>Markdown>打开`显示行号`，以获得更好体验
 
 1. 支持代码块自定义光标颜色
@@ -116,8 +118,9 @@ kbd元素样式如下
 
 ![PixPin 2024 08 18 17 15 57](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-15-57355700bf960eb69f.png)
 
-- 在文件夹`icon`友情提供小图标
 
+>[!important]
+>文件夹`icon`友情提供小图标
 > 复制并保存到电脑本地固定位置，图片直接引用文件即可
 
 ![badge592266035bf8b236](https://img.picgo.net/2024/05/27/badge592266035bf8b236067398135730b8b5.png)
@@ -173,7 +176,7 @@ $black-gradient: #596164 0%, #868f96 100%;
 
 $blue-gradient: #005bea 0%, #00c6fb 100%;
 
-$red-gradient: #fc6076 0%, #ff9a44 100%;
+$tomato-gradient: #fc6076 0%, #ff9a44 100%;
 
 $orange-gradient: #ff5858 0%, #f09819 100%;
 
@@ -207,7 +210,6 @@ $focusGradient:$green-gradient;
   --active-file-bg-color: yellow;
   --active-file-text-color: $themeColor;
   --active-file-border-color: green;
-  --active-file-border-color: red;
   --side-bar-bg-color: purple;
   --item-hover-text-color: skyblue;
 }

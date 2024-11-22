@@ -1,5 +1,5 @@
 /* 
-version:0.0.4.2
+version:0.0.4.3
 author:passwordgloo
 mode:auto switch light and dark mode
 repo:https://github.com/passwordgloo/Typora-foresee-theme
@@ -48,7 +48,7 @@ $black-gradient: #596164, #646c70, #6f787d, #7a8389, #868f96;
 
 $blue-gradient: #005bea, #007bf9, #0097ff, #00affe, #00c6fb;
 
-$red-gradient: #ed2842, #f33d58, #f7506d, #fa6181, #fb7294;
+$tomato-gradient: #ed2842, #f33d58, #f7506d, #fa6181, #fb7294;
 
 $orange-gradient: #e9a11a, #eab211, #e8c40a, #e5d50f, #dee71d;
 
@@ -64,13 +64,13 @@ tomato purple
 blue purple
 */
 
-$themeColor: $blue;
+$themeColor: $orange;
 
-$focusColor: $purple;
+$focusColor: $green;
 
-$themeGradient:$blue-gradient;
+$themeGradient:$orange-gradient;
 
-$focusGradient:$purple-gradient;
+$focusGradient:$green-gradient;
 
 :root {
   --bg-color: map-get($article, light);
@@ -311,7 +311,7 @@ span[alt="green"] {
 
 span[alt="red"] {
   @include badge-common();
-  background-image: linear-gradient(to right, $red-gradient);
+  background-image: linear-gradient(to right, $tomato-gradient);
 }
 
 p,
@@ -451,7 +451,7 @@ blockquote[alt="purple"] {
 
 blockquote[alt="red"] {
   @include blockquote-common();
-  background-image: linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)), linear-gradient(0deg, $red-gradient);
+  background-image: linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)), linear-gradient(0deg, $tomato-gradient);
   color: $red;
 
   img {
@@ -460,14 +460,20 @@ blockquote[alt="red"] {
   }
 }
 
+// Use for blockquote(Github style)
 @mixin bar {
-  padding: 10px 20px;
+  padding: 2px 20px;
   border-radius: 6px;
   color: white;
-  display: flex;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   border-left: none !important;
+}
+
+// Use for blockquote(icon bar mode)
+%bar{
+  @include bar();
+  display: flex;
 }
 
 %bar_icon {
@@ -499,7 +505,7 @@ blockquote[alt="red"] {
 
 .md-alert.md-alert-caution {
   @include bar();
-  background: linear-gradient(to right, $red-gradient);
+  background: linear-gradient(to right, $tomato-gradient);
 }
 
 .md-alert.md-alert-tip {
@@ -517,41 +523,8 @@ blockquote[alt="red"] {
   background: linear-gradient(to right, $orange-gradient);
 }
 
-section[alt="warning"] {
-  @include bar();
-  background: linear-gradient(to right, $orange-gradient);
-
-  &::before {
-    content: url("./foresee/icon/tanhao.svg");
-    @extend %bar_icon;
-    background: linear-gradient(to right, $orange-gradient);
-  }
-}
-
-section[alt="info"] {
-  @include bar();
-  background: linear-gradient(to right, $blue-gradient);
-
-  &::before {
-    content: url("./foresee/icon/info.svg");
-    @extend %bar_icon;
-    background: linear-gradient(to right, $blue-gradient);
-  }
-}
-
-section[alt="tip"] {
-  @include bar();
-  background: linear-gradient(to right, $green-gradient);
-
-  &::before {
-    content: url("./foresee/icon/question.svg");
-    @extend %bar_icon;
-    background: linear-gradient(to right, $green-gradient);
-  }
-}
-
 section[alt="note"] {
-  @include bar();
+  @extend %bar;
   background: linear-gradient(to right, $black-gradient);
 
   &::before {
@@ -561,23 +534,56 @@ section[alt="note"] {
   }
 }
 
-section[alt="caution"] {
-  @include bar();
-  background: linear-gradient(to right, $red-gradient);
+section[alt="info"] {
+  @extend %bar;
+  background: linear-gradient(to right, $blue-gradient);
 
   &::before {
-    content: url("./foresee/icon/tanhao.svg");
+    content: url("./foresee/icon/correct.svg");
     @extend %bar_icon;
-    background: linear-gradient(to right, $red-gradient);
+    background: linear-gradient(to right, $blue-gradient);
+  }
+}
+
+section[alt="tip"] {
+  @extend %bar;
+  background: linear-gradient(to right, $green-gradient);
+
+  &::before {
+    content: url("./foresee/icon/question.svg");
+    @extend %bar_icon;
+    background: linear-gradient(to right, $green-gradient);
+  }
+}
+
+section[alt="warning"] {
+  @extend %bar;
+  background: linear-gradient(to right, $orange-gradient);
+
+  &::before {
+    content: url("./foresee/icon/alert.svg");
+    @extend %bar_icon;
+    background: linear-gradient(to right, $orange-gradient);
+  }
+}
+
+section[alt="caution"] {
+  @extend %bar;
+  background: linear-gradient(to right, $tomato-gradient);
+
+  &::before {
+    content: url("./foresee/icon/caution.svg");
+    @extend %bar_icon;
+    background: linear-gradient(to right, $tomato-gradient);
   }
 }
 
 section[alt="important"] {
-  @include bar();
+  @extend %bar;
   background: linear-gradient(to right, $purple-gradient);
 
   &::before {
-    content: url("./foresee/icon/tanhao.svg");
+    content: url("./foresee/icon/alert.svg");
     @extend %bar_icon;
     background: linear-gradient(to right, $purple-gradient);
   }

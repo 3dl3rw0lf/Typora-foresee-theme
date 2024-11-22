@@ -31,6 +31,7 @@ Selected textstyle is inspired by [typora-dyzj-theme](https://github.com/muggled
 
 #### Inline code
 
+>[!tip]
 >Use Mac keyboard style for line code and `kbd` element
 
 inline code like this
@@ -41,7 +42,7 @@ inline code like this
 
 ![PixPin 2024 10 07 11 06 58](https://img.picgo.net/2024/10/07/PixPin_2024-10-07_11-06-58b1385e0e76a87061.webp)
 
-
+>[!info]
 > Please go to Preferences>Markdown> to turn on `displaying line numbers` for a better experience
 
 1. Support custom cursor color
@@ -118,8 +119,8 @@ Redesign header style and its focus mode
 
 ![PixPin 2024 08 18 17 15 57](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-15-57355700bf960eb69f.png)
 
-Provide local small icon in foldername called `icon`
-
+>[!important]
+> Provide local small icon in which foldername called `icon`
 > Copy and save in a fixed location on your computer, and directly reference the file to the image
 
 ![badge592266035bf8b236](https://img.picgo.net/2024/05/27/badge592266035bf8b236067398135730b8b5.png)
@@ -171,7 +172,7 @@ $black-gradient: #596164 0%, #868f96 100%;
 
 $blue-gradient: #005bea 0%, #00c6fb 100%;
 
-$red-gradient: #fc6076 0%, #ff9a44 100%;
+$tomato-gradient: #fc6076 0%, #ff9a44 100%;
 
 $orange-gradient: #ff5858 0%, #f09819 100%;
 
@@ -205,7 +206,6 @@ $focusGradient:$green-gradient;
   --active-file-bg-color: yellow;
   --active-file-text-color: $themeColor;
   --active-file-border-color: green;
-  --active-file-border-color: red;
   --side-bar-bg-color: purple;
   --item-hover-text-color: skyblue;
 }
@@ -234,6 +234,7 @@ Visit [wiki](https://github.com/passwordgloo/Typora-foresee-theme/wiki/English-T
 ![dark en](https://img.picgo.net/2024/05/03/dark_en60fbd4000b16c900.png)
 
 ### Light mode
+
 ![light en](https://img.picgo.net/2024/05/03/light_ena9da10e94d5a2ae9.png)
 
 ## Purpose of use
