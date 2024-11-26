@@ -64,13 +64,13 @@ tomato purple
 blue purple
 */
 
-$themeColor: $orange;
+$themeColor: $blue;
 
-$focusColor: $green;
+$focusColor: $purple;
 
-$themeGradient:$orange-gradient;
+$themeGradient:$blue-gradient;
 
-$focusGradient:$green-gradient;
+$focusGradient:$purple-gradient;
 
 :root {
   --bg-color: map-get($article, light);
@@ -82,14 +82,10 @@ $focusGradient:$green-gradient;
   --control-text-hover-color: $themeColor;
   --md-char-color: rgba(72, 93, 108, 0.75);
   --meta-content-color: var(--md-char-color);
-  --primary-btn-border-color: black;
   --primary-btn-text-color: var(--text-color);
-  --active-file-bg-color: yellow;
-  --active-file-text-color: $themeColor;
-  --active-file-border-color: green;
-  --active-file-border-color: red;
-  --side-bar-bg-color: purple;
-  --item-hover-text-color: skyblue;
+  --active-file-bg-color: var(--bg-color);
+  --active-file-text-color: map-get($textColor, light);
+  --item-hover-text-color: $focusColor;
 }
 
 // Custom fonts and style
@@ -742,7 +738,7 @@ pre.md-fences {
 .active-tab-files #info-panel-tab-file:hover,
 .active-tab-outline #info-panel-tab-outline,
 .active-tab-outline #info-panel-tab-outline:hover {
-  color: map-get($display, light);
+  color: $themeColor;
 }
 
 // Outline
