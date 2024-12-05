@@ -73,39 +73,44 @@ You can type <kbd>></kbd> to insert blockquote by default
 <blockquote alt = 'red'>red</blockquote>
 ```
 
-![PixPin 2024 08 18 17 17 04](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-17-044fd017cfb6a0a347.png)
+![PixPin 2024 08 18 17 17 04](https://img.picgo.net/2024/12/05/2024-12-05-23.25.517d5d3904c12445ac.png)
 
 3. Github blockquote style
 
 ```markdown
->[!note]
+> [!note]
 >
+> Note text
 
->[!tip]
+> [!tip]
 >
+> Tip text
 
->[!warning]
+> [!warning]
 >
+> Warning text
 
->[!caution]
+> [!caution]
 >
+> Caution text
 
->[!important]
+> [!important]
 >
+> Important text
 ```
 
-![PixPin 2024 08 18 17 13 52](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-13-52abc29699a4dabdfa.png)
+![PixPin 2024 08 18 17 13 52](https://img.picgo.net/2024/12/05/2024-12-05-23.20.19eaddd2d09531df4b.png)
 
 4. Blockquote style can change its color when it close to heading
 
-![PixPin 2024 08 18 17 40 31](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-40-31438bf74be7559e4d.gif)
+![PixPin 2024 08 18 17 40 31](https://img.picgo.net/2024/12/05/PixPin_2024-12-05_23-15-55b281fe1bddd5b4fa.gif)
 
 ### Title
 
 >[!note]
 >Redesign header style and its focus mode
 
-![PixPin 2024 08 18 17 23 46](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-23-465c4a1f5ea37d187c.gif)
+![PixPin 2024 08 18 17 23 46](https://img.picgo.net/2024/12/05/PixPin_2024-12-05_23-14-37911c453bcb1f3592.gif)
 
 ### Icon
 
@@ -114,11 +119,11 @@ You can type <kbd>></kbd> to insert blockquote by default
 <section alt="info">info text</section>
 <section alt="tip">tip text</section>
 <section alt="warning">warning text</section>
-<section alt="caution">caution</section>
-<section alt="important">important</section>
+<section alt="caution">caution text</section>
+<section alt="important">important text</section>
 ```
 
-![PixPin 2024 08 18 17 15 57](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-15-57355700bf960eb69f.png)
+![PixPin 2024 08 18 17 15 57](https://img.picgo.net/2024/12/05/2024-12-05-23.43.16f1e883c9ba6359d5.png)
 
 >[!tip]
 > Provide local small icon in which foldername called `icon`
@@ -205,13 +210,8 @@ $focusGradient:$green-gradient;
 
   --md-char-color: rgba(72, 93, 108, 0.75);
   --meta-content-color: var(--md-char-color);
-  --primary-btn-border-color: black;
   --primary-btn-text-color: var(--text-color);
-  --active-file-bg-color: yellow;
   --active-file-text-color: $themeColor;
-  --active-file-border-color: green;
-  --side-bar-bg-color: purple;
-  --item-hover-text-color: skyblue;
 }
 
 // Custom fonts and style

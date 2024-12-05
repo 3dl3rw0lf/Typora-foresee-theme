@@ -1,5 +1,5 @@
 /* 
-version:0.0.4.6
+version:0.0.4.7
 author:passwordgloo
 mode:auto switch light and dark mode
 repo:https://github.com/passwordgloo/Typora-foresee-theme
@@ -145,8 +145,8 @@ body {
 // Header style
 
 @mixin header-common {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: .8rem;
+  margin-bottom: .8rem;
   line-height: 1.4;
   cursor: text;
   font-family: $font-family;
@@ -162,42 +162,50 @@ h1 {
 
 h2 {
   font-size: 1.8rem;
-  font-weight: 1000;
-  line-height: 1.2;
-  padding-left: 0.5rem;
-  border-left: 8px solid $themeColor;
-  border-radius: 6px;
-  @include header-common();
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 0;
+
+  &::before {
+    content: '';
+    width: .5rem;
+    height: 2rem;
+    margin-right: .5rem;
+    background: linear-gradient(45deg, $themeGradient);
+    border-radius: $border-radius;
+  }
 }
 
-#write > h2.md-focus {
-  border-left-color: $focusColor;
-  transition: border-left-color 0.8s linear;
+h2:hover::before,
+#write>h2.md-focus::after {
+  background: linear-gradient(45deg, $focusGradient);
 }
 
 h3 {
+  position: relative;
   font-size: 1.6rem;
   font-weight: 700;
   @include header-common();
 
   &::after {
     content: "";
-    display: block;
-    width: 5rem;
+    position: absolute;
+    left: 0;
+    bottom: -.3rem;
+    width: 3rem;
     height: 0.3rem;
     background-image: linear-gradient(to right, $themeGradient);
     border-radius: $border-radius;
   }
 }
 
-#write > h3.md-focus::after {
+#write>h3.md-focus::after {
   content: "";
-  display: block;
-  width: 5rem;
+  width: 6rem;
   height: 0.3rem;
   background-image: linear-gradient(to right, $focusGradient);
   border-radius: $border-radius;
-  transition: background-image 0.8s linear;
+  transition: width 1s ease-in-out;
 }
 
 h4 {
@@ -208,7 +216,7 @@ h4 {
   @include header-common();
 }
 
-#write > h4.md-focus {
+#write>h4.md-focus {
   border-bottom-color: $focusColor;
   transition: border-bottom-color 0.5s linear;
 }
@@ -225,6 +233,7 @@ h5 {
 }
 
 @keyframes bounce {
+
   0%,
   100%,
   20%,
@@ -242,7 +251,7 @@ h5 {
   }
 }
 
-#write > h5.md-focus:before {
+#write>h5.md-focus:before {
   width: auto;
   height: auto;
   background-color: $focusColor;
@@ -259,7 +268,7 @@ p {
   word-wrap: break-word;
 }
 
-p.md-focus > span.md-plain.md-expand {
+p.md-focus>span.md-plain.md-expand {
   border-bottom: 2px dashed $focusColor;
   color: $focusColor;
 }
@@ -318,8 +327,8 @@ table {
   margin: 0.8em 0;
 }
 
-li > ol,
-li > ul {
+li>ol,
+li>ul {
   margin: 0 0;
 }
 
@@ -395,7 +404,7 @@ blockquote {
   }
 }
 
-h2 + blockquote,
+h2+blockquote,
 blockquote[alt="green"] {
   @include blockquote-common();
   background-image: linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)),
@@ -410,7 +419,7 @@ blockquote[alt="green"] {
   }
 }
 
-h3 + blockquote,
+h3+blockquote,
 blockquote[alt="blue"] {
   @include blockquote-common();
   background-image: linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)),
@@ -423,7 +432,7 @@ blockquote[alt="blue"] {
   }
 }
 
-h4 + blockquote,
+h4+blockquote,
 blockquote[alt="orange"] {
   @include blockquote-common();
   background-image: linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)),
@@ -436,7 +445,7 @@ blockquote[alt="orange"] {
   }
 }
 
-h5 + blockquote,
+h5+blockquote,
 blockquote[alt="purple"] {
   @include blockquote-common();
   background-image: linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)),
@@ -463,8 +472,8 @@ blockquote[alt="red"] {
 
 // Use for blockquote(Github style)
 @mixin bar {
-  padding: 2px 20px;
-  border-radius: 6px;
+  padding: 10px 20px;
+  border-radius: $border-radius;
   color: white;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -699,12 +708,13 @@ pre.md-fences {
   padding-left: 0;
 }
 
-.md-task-list-item > input {
+.md-task-list-item>input {
   margin-left: -1.3em;
   margin-top: 0.3rem;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+
   ::after {
     content: "";
     position: absolute;
@@ -717,6 +727,7 @@ pre.md-fences {
     text-align: center;
     border: 1px solid $themeColor;
   }
+
   :checked::after {
     content: "✓";
     font-size: 12px;
@@ -778,7 +789,7 @@ pre.md-fences {
 }
 
 .on-focus-mode .md-end-block:not(.md-focus) img,
-.on-focus-mode .md-task-list-item:not(.md-focus-container) > input {
+.on-focus-mode .md-task-list-item:not(.md-focus-container)>input {
   opacity: #686868 !important;
 }
 
@@ -786,7 +797,7 @@ pre.md-fences {
   color: #686868;
 }
 
-.on-focus-mode .md-fences.md-focus .CodeMirror-code > *:not(.CodeMirror-activeline) *,
+.on-focus-mode .md-fences.md-focus .CodeMirror-code>*:not(.CodeMirror-activeline) *,
 .on-focus-mode .CodeMirror.cm-s-inner:not(.CodeMirror-focused) * {
   color: #686868 !important;
 }
@@ -796,7 +807,7 @@ pre.md-fences {
   color: #fff;
 }
 
-.on-focus-mode #typora-source .CodeMirror-code > *:not(.CodeMirror-activeline) * {
+.on-focus-mode #typora-source .CodeMirror-code>*:not(.CodeMirror-activeline) * {
   color: #686868 !important;
 }
 
@@ -837,7 +848,7 @@ pre.md-fences {
   background-color: map-get($article, light);
 }
 
-#megamenu-menu-list > li > a {
+#megamenu-menu-list>li>a {
   border: none;
   color: var(--text-color);
 }
@@ -854,7 +865,7 @@ pre.md-fences {
 .btn-default.focus,
 .btn-default:active,
 .btn-default.active,
-.open > .dropdown-toggle.btn-default {
+.open>.dropdown-toggle.btn-default {
   color: white;
   border: 1px solid #ddd;
   background-color: inherit;
@@ -949,12 +960,12 @@ pre.md-fences {
   height: 32px;
 }
 
-.file-library-node.active > .file-node-content,
+.file-library-node.active>.file-node-content,
 .file-list-item.active {
-  color: var(--active-file-text-color);
+  color: $focusColor;
 }
 
-.file-library-node.active > .file-node-background {
+.file-library-node.active>.file-node-background {
   background-color: var(--bg-color);
   border-color: $themeColor;
 }
@@ -1026,10 +1037,10 @@ footer.ty-footer {
 
 .cm-s-inner .CodeMirror-line::selection,
 .cm-s-inner .CodeMirror-line::-moz-selection,
-.cm-s-inner .CodeMirror-line > span::selection,
-.cm-s-inner .CodeMirror-line > span::-moz-selection,
-.cm-s-inner .CodeMirror-line > span > span::selection,
-.cm-s-inner .CodeMirror-line > span > span::-moz-selection {
+.cm-s-inner .CodeMirror-line>span::selection,
+.cm-s-inner .CodeMirror-line>span::-moz-selection,
+.cm-s-inner .CodeMirror-line>span>span::selection,
+.cm-s-inner .CodeMirror-line>span>span::-moz-selection {
   background: rgba(255, 255, 255, 0.1);
 }
 
@@ -1119,6 +1130,7 @@ footer.ty-footer {
 // Print config
 
 @media print {
+
   table,
   pre {
     page-break-inside: avoid;
@@ -1174,10 +1186,10 @@ footer.ty-footer {
 
   .cm-s-inner .CodeMirror-line::selection,
   .cm-s-inner .CodeMirror-line::-moz-selection,
-  .cm-s-inner .CodeMirror-line > span::selection,
-  .cm-s-inner .CodeMirror-line > span::-moz-selection,
-  .cm-s-inner .CodeMirror-line > span > span::selection,
-  .cm-s-inner .CodeMirror-line > span > span::-moz-selection {
+  .cm-s-inner .CodeMirror-line>span::selection,
+  .cm-s-inner .CodeMirror-line>span::-moz-selection,
+  .cm-s-inner .CodeMirror-line>span>span::selection,
+  .cm-s-inner .CodeMirror-line>span>span::-moz-selection {
     background: rgba(255, 255, 255, 0.1);
   }
 
